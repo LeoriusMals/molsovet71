@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#103e2d">
+<title>Молодёжный совет Правительства Тульской области</title>
+<style>
+:root{--deep:#103e2d;--green:#14794d;--green2:#1a9460;--mint:#eaf5ee;--bg:#f5f8f5;--line:#dce8df;--text:#1a3529;--muted:#6a8074;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.head{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.crest{width:48px;height:48px;border-radius:15px;background:var(--deep);color:#fff;display:grid;place-items:center;font-size:24px;flex-shrink:0}.brand-name{font-weight:800;color:var(--deep);line-height:1.2}.brand-name small{display:block;font-weight:500;color:var(--muted);font-size:12px;margin-top:5px}.nav{display:flex;align-items:center;gap:7px}.nav a{padding:10px 12px;border-radius:10px;color:#4d675a;font-weight:650;font-size:14px}.nav a:hover{background:var(--mint);color:var(--green)}.nav .login{background:var(--green);color:#fff;padding:11px 17px}.menu{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;color:var(--deep)}
+.hero{padding:43px 0 28px}.hero-box{border-radius:27px;background:linear-gradient(120deg,#103e2d 0%,#126b45 64%,#168958 100%);color:#fff;padding:clamp(28px,5vw,62px);position:relative;overflow:hidden;display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:24px;min-height:360px}.hero-box:after{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-80px;top:-105px;box-shadow:0 0 0 36px rgba(255,255,255,.035),0 0 0 75px rgba(255,255,255,.025)}.kicker{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:800;color:#c7ead5}.hero h1{font-size:clamp(32px,4.7vw,54px);letter-spacing:-.04em;line-height:1.07;margin:15px 0 19px;max-width:730px}.hero p{max-width:630px;color:#d8eee0;font-size:16px;margin:0 0 26px}.actions{display:flex;gap:11px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:11px;padding:12px 17px;font-weight:750;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px)}.btn-light{background:#fff;color:var(--deep)}.btn-glass{border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.08);color:#fff}.hero-mark{position:relative;z-index:1;justify-self:center;width:min(245px,100%);aspect-ratio:1;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.07);border-radius:50%;display:grid;place-items:center}.hero-mark-inner{width:72%;aspect-ratio:1;border:1px solid rgba(255,255,255,.24);border-radius:50%;display:grid;place-items:center;font-size:78px;color:#d7efdf}
+.section{padding:27px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:19px}h2{font-size:27px;letter-spacing:-.03em;color:var(--deep);margin:0}.section-head p{color:var(--muted);margin:6px 0 0}.small-link{font-weight:750;color:var(--green);white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);background:#fff;border-radius:18px;padding:23px;min-width:0;display:flex;flex-direction:column;box-shadow:0 5px 18px rgba(22,64,43,.025);transition:transform .18s,box-shadow .18s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(22,64,43,.08)}.card-icon{width:47px;height:47px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:23px;color:var(--green);margin-bottom:18px}.card h3{font-size:19px;line-height:1.25;color:var(--deep);margin:0 0 9px}.card p{color:var(--muted);margin:0 0 19px;font-size:14px;flex:1}.card-link{color:var(--green);font-weight:800;font-size:14px}.card-link span{font-size:18px;margin-left:5px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.about-main{background:#fff;border:1px solid var(--line);border-radius:19px;padding:clamp(23px,4vw,36px)}.about-main p{color:#5d7568}.about-aside{background:#e9f4ed;border-radius:19px;padding:clamp(23px,4vw,36px);display:flex;flex-direction:column;justify-content:center}.about-aside h3{font-size:21px;color:var(--deep);margin:0 0 12px}.about-aside p{color:#557263;margin:0}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:19px}.value{background:#fff;border:1px solid #dce9df;border-radius:12px;padding:13px;font-size:13px;font-weight:750;color:var(--deep)}.value span{display:block;color:var(--green);font-size:20px;margin-bottom:5px}
+.bottom-cta{margin:29px 0 50px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px}.bottom-cta h2{font-size:23px}.bottom-cta p{color:var(--muted);margin:6px 0 0}.btn-green{background:var(--green);color:#fff;white-space:nowrap}
+footer{background:#fff;border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.foot strong{color:var(--deep)}
+.notice{font-size:12px;color:var(--muted);margin-top:8px}
+
+.modal-backdrop{position:fixed;inset:0;background:rgba(8,31,21,.62);z-index:30;display:none;align-items:center;justify-content:center;padding:18px;overflow-y:auto}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;width:min(600px,100%);max-height:min(90vh,850px);overflow-y:auto;border-radius:22px;box-shadow:0 24px 80px rgba(0,0,0,.24);padding:clamp(20px,4vw,32px);position:relative}
+.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:7px}
+.modal-head h2{font-size:25px;line-height:1.2}
+.modal-close{border:0;background:var(--mint);color:var(--deep);width:38px;height:38px;border-radius:11px;font-size:22px;flex-shrink:0}
+.modal-subtitle{color:var(--muted);margin:0 0 22px;font-size:14px}
+.modal .field{display:grid;gap:6px;margin-bottom:16px}
+.modal label{font-weight:700;color:#345748;font-size:13px}
+.modal input[type=text],.modal textarea{width:100%;border:1px solid #d6e3da;background:#fff;border-radius:10px;padding:12px 13px;color:var(--text);font:inherit}
+.modal textarea{resize:vertical;min-height:125px}
+.file-drop{border:1.5px dashed #b9d4c3;border-radius:13px;padding:18px;text-align:center;background:#f7fbf8;cursor:pointer}
+.file-drop:hover{border-color:var(--green);background:var(--mint)}
+.file-drop strong{display:block;color:var(--deep);margin:4px 0}
+.file-drop span{display:block;color:var(--muted);font-size:12px}
+.file-list{display:grid;gap:8px;margin-top:10px}
+.file-item{display:flex;align-items:center;gap:10px;padding:9px 11px;background:#f3f7f4;border-radius:9px;font-size:13px}
+.file-item .file-name{overflow-wrap:anywhere;flex:1}
+.file-item button{border:0;background:transparent;color:#a33b30;font-weight:700;padding:4px}
+.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px;flex-wrap:wrap}
+.modal-success{text-align:center;padding:18px 5px}
+.modal-success .success-mark{width:58px;height:58px;background:var(--mint);color:var(--green);border-radius:50%;display:grid;place-items:center;font-size:28px;margin:0 auto 15px}
+.modal-success h3{color:var(--deep);margin:0 0 8px;font-size:23px}
+.modal-success p{color:var(--muted);margin:0 0 20px}
+
+@media(max-width:850px){.head{height:auto;min-height:75px;flex-wrap:wrap;padding:12px 0}.nav{gap:2px}.nav a{font-size:13px;padding:9px}.hero-box{grid-template-columns:1fr .38fr}.hero-mark{width:170px}.hero-mark-inner{font-size:58px}.cards{gap:12px}.card{padding:19px}.about{gap:14px}}
+@media(max-width:640px){.wrap{width:calc(100% - 24px)}.head{gap:12px}.brand-name{font-size:14px}.brand-name small{font-size:11px}.crest{width:41px;height:41px}.menu{display:block}.nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding-bottom:6px}.nav.open{display:flex}.nav a{padding:11px 12px}.hero{padding-top:19px}.hero-box{grid-template-columns:1fr;padding:28px 23px;min-height:0;border-radius:20px}.hero-mark{display:none}.hero h1{font-size:37px}.hero p{font-size:14px}.section-head{align-items:start}.section-head h2{font-size:24px}.cards{grid-template-columns:1fr}.card{padding:20px}.card-icon{margin-bottom:13px}.about{grid-template-columns:1fr}.values{grid-template-columns:1fr}.bottom-cta{align-items:flex-start;flex-direction:column;padding:23px}.bottom-cta h2{font-size:21px}.btn-green{width:100%}.section{padding:20px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap head">
+  <a class="brand" href="#top"><span class="crest">✳</span><span class="brand-name">Молодёжный совет<small>Правительства Тульской области</small></span></a>
+  <button class="menu" id="menuButton" aria-expanded="false" aria-controls="mainNav">☰ Меню</button>
+  <nav class="nav" id="mainNav">
+    <a href="#about">О совете</a><a href="#sections">Разделы</a><a href="molodezh_meropriyatiya.html">Мероприятия</a><a class="login" href="login.html">Войти в аккаунт&nbsp; ↗</a>
+  </nav>
+</div></header>
+<main class="wrap" id="top">
+  <section class="hero"><div class="hero-box">
+    <div><div class="kicker">Идеи молодых. Возможности региона.</div>
+      <h1>Молодёжь, которая меняет регион</h1>
+      <p>Площадка для инициатив, профессионального развития и совместной работы молодых специалистов на благо Тульской области.</p>
+      <div class="actions"><a class="btn btn-light" href="#sections">Открыть портал&nbsp; ↗</a><a class="btn btn-glass" href="molodezh_meropriyatiya.html">Ближайшие мероприятия&nbsp; →</a><button class="btn btn-glass" type="button" data-open-idea>＋ Предложить идею</button></div>
+    </div><div class="hero-mark" aria-hidden="true"><div class="hero-mark-inner">✳</div></div>
+  </div></section>
+
+  <section class="section" id="sections">
+    <div class="section-head"><div><h2>Возможности портала</h2><p>Все основные инструменты Молодёжного совета в одном месте.</p></div></div>
+    <div class="cards">
+      <a class="card" href="login.html"><div class="card-icon">↗</div><h3>Личный кабинет</h3><p>Вход в аккаунт, персональная информация и доступ к рабочим разделам совета.</p><span class="card-link">Перейти ко входу <span>→</span></span></a>
+      <a class="card" href="rating.html"><div class="card-icon">★</div><h3>Рейтинг участников</h3><p>Результаты активности, достижения и вклад участников в работу Молодёжного совета.</p><span class="card-link">Открыть рейтинг <span>→</span></span></a>
+      <a class="card" href="molodezh_meropriyatiya.html"><div class="card-icon">▦</div><h3>Мероприятия</h3><p>Анонсы событий, подробная информация и запись на участие.</p><span class="card-link">Смотреть мероприятия <span>→</span></span></a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-head"><div><h2>О Молодёжном совете</h2><p>Объединяем инициативных молодых специалистов.</p></div></div>
+    <div class="about">
+      <div class="about-main"><h3 style="font-size:21px;color:var(--deep);margin:0 0 12px">Диалог, инициативы и реальные дела</h3><p>Молодёжный совет — пространство для обмена опытом, обсуждения предложений и участия в проектах, направленных на развитие Тульской области.</p><p>Портал поможет участникам следить за мероприятиями, видеть результаты работы и оставаться на связи с командой.</p></div>
+      <div class="about-aside"><h3>У каждого есть возможность внести вклад</h3><p>Предлагай идеи, участвуй в событиях и развивай проекты вместе с другими молодыми специалистами.</p><div class="values"><div class="value"><span>✦</span>Инициатива</div><div class="value"><span>◎</span>Команда</div><div class="value"><span>↗</span>Развитие</div></div></div>
+    </div>
+  </section>
+
+  <section class="bottom-cta" id="account"><div><h2>Готов подключиться к работе?</h2><p>Войди в аккаунт или начни с ближайших мероприятий.</p><div class="notice">Вход и рейтинг пока подготовлены как точки перехода для будущей интеграции.</div></div><div class="actions"><a class="btn btn-green" href="login.html">Войти в аккаунт</a><a class="btn" style="background:var(--mint);color:var(--green)" href="molodezh_meropriyatiya.html">К мероприятиям</a><button class="btn" style="background:#f2f7f3;color:var(--green)" type="button" data-open-idea>Предложить идею</button></div></section>
+</main>
+
+<div class="modal-backdrop" id="ideaModal" aria-hidden="true">
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="ideaModalTitle">
+    <div id="ideaFormView">
+      <div class="modal-head"><h2 id="ideaModalTitle">Предложить идею</h2><button class="modal-close" type="button" id="closeIdeaModal" aria-label="Закрыть окно">×</button></div>
+      <p class="modal-subtitle">Расскажи о своей инициативе. При необходимости приложи документы, презентацию или другие материалы.</p>
+      <form id="ideaForm">
+        <div class="field"><label for="ideaTitle">Заголовок идеи *</label><input id="ideaTitle" name="title" type="text" required maxlength="160" placeholder="Кратко сформулируй идею"></div>
+        <div class="field"><label for="ideaDescription">Описание *</label><textarea id="ideaDescription" name="description" required minlength="5" maxlength="5000" placeholder="В чём заключается идея, для кого она и что поможет реализовать её?"></textarea></div>
+        <div class="field"><label>Прикрепить файлы <span style="font-weight:500;color:var(--muted)">(необязательно)</span></label>
+          <label class="file-drop" for="ideaFiles"><span style="font-size:25px">＋</span><strong>Выбрать файлы</strong><span>Документы, PDF, презентации или изображения</span><span>До 5 файлов, максимум 10 МБ каждый</span></label>
+          <input id="ideaFiles" type="file" multiple hidden accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.jpg,.jpeg,.png,.webp">
+          <div class="file-list" id="ideaFileList"></div>
+        </div>
+        <div class="field"><label for="ideaAuthor">Имя или контакт <span style="font-weight:500;color:var(--muted)">(необязательно)</span></label><input id="ideaAuthor" name="author" type="text" maxlength="160" placeholder="Как с тобой связаться"></div>
+        <p class="notice">Пока это демонстрационная форма: данные и выбранные файлы не отправляются на сервер. После подключения серверной части идеи смогут поступать ответственным сотрудникам.</p>
+        <div class="modal-actions"><button class="btn" type="button" id="cancelIdea" style="background:#f0f4f1;color:var(--deep)">Отмена</button><button class="btn btn-green" type="submit">Отправить идею</button></div>
+      </form>
+    </div>
+    <div id="ideaSuccessView" class="modal-success" hidden><div class="success-mark">✓</div><h3>Идея подготовлена</h3><p id="ideaSuccessText">Форма заполнена. Для реальной отправки нужно подключить сервер.</p><button class="btn btn-green" type="button" id="finishIdea">Готово</button></div>
+  </section>
+</div>
+
+<footer><div class="wrap foot"><span><strong>Молодёжный совет Правительства Тульской области</strong></span><span>Официальный портал · Демонстрационная концепция</span></div></footer>
+<script>
+(function(){
+const menu=document.getElementById('menuButton'),nav=document.getElementById('mainNav');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕ Закрыть':'☰ Меню'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰ Меню'}));
+
+const modal=document.getElementById('ideaModal'),ideaForm=document.getElementById('ideaForm'),fileInput=document.getElementById('ideaFiles'),fileList=document.getElementById('ideaFileList');
+let selectedFiles=[];
+function openIdea(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';document.getElementById('ideaFormView').hidden=false;document.getElementById('ideaSuccessView').hidden=true;setTimeout(()=>document.getElementById('ideaTitle').focus(),50)}
+function closeIdea(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+document.querySelectorAll('[data-open-idea]').forEach(b=>b.addEventListener('click',openIdea));
+document.getElementById('closeIdeaModal').addEventListener('click',closeIdea);
+document.getElementById('cancelIdea').addEventListener('click',closeIdea);
+document.getElementById('finishIdea').addEventListener('click',()=>{closeIdea();ideaForm.reset();selectedFiles=[];renderIdeaFiles()});
+modal.addEventListener('click',e=>{if(e.target===modal)closeIdea()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeIdea()});
+function renderIdeaFiles(){fileList.innerHTML='';selectedFiles.forEach((file,index)=>{const row=document.createElement('div');row.className='file-item';const icon=document.createElement('span');icon.textContent='📎';const name=document.createElement('span');name.className='file-name';name.textContent=file.name+' · '+(file.size/1024/1024).toFixed(2)+' МБ';const remove=document.createElement('button');remove.type='button';remove.textContent='Убрать';remove.setAttribute('aria-label','Убрать файл '+file.name);remove.addEventListener('click',()=>{selectedFiles.splice(index,1);syncFileInput();renderIdeaFiles()});row.append(icon,name,remove);fileList.appendChild(row)})}
+function syncFileInput(){const dt=new DataTransfer();selectedFiles.forEach(f=>dt.items.add(f));fileInput.files=dt.files}
+fileInput.addEventListener('change',()=>{const incoming=Array.from(fileInput.files);for(const file of incoming){if(selectedFiles.some(f=>f.name===file.name&&f.size===file.size))continue;if(selectedFiles.length>=5){alert('Можно прикрепить не более 5 файлов.');break}if(file.size>10*1024*1024){alert('Файл «'+file.name+'» больше 10 МБ и не добавлен.');continue}selectedFiles.push(file)}syncFileInput();renderIdeaFiles()});
+ideaForm.addEventListener('submit',e=>{e.preventDefault();const item={id:'IDEA-'+Date.now().toString().slice(-8),title:document.getElementById('ideaTitle').value.trim(),description:document.getElementById('ideaDescription').value.trim(),author:document.getElementById('ideaAuthor').value.trim(),files:selectedFiles.map(f=>({name:f.name,size:f.size,type:f.type})),createdAt:new Date().toISOString(),status:'Черновик — демонстрация'};try{const old=JSON.parse(localStorage.getItem('youth_ideas_demo')||'[]');old.push(item);localStorage.setItem('youth_ideas_demo',JSON.stringify(old))}catch(err){}document.getElementById('ideaSuccessText').textContent='Заголовок: «'+item.title+'». Прикреплено файлов: '+item.files.length+'. Сейчас это демонстрация: файлы не загружаются на сервер.';document.getElementById('ideaFormView').hidden=true;document.getElementById('ideaSuccessView').hidden=false});
+
+})();
+</script>
+</body>
+</html>
