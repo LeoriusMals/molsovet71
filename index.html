@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#103e2d">
+<title>Молодёжный совет Правительства Тульской области</title>
+<style>
+:root{--deep:#103e2d;--green:#14794d;--green2:#1a9460;--mint:#eaf5ee;--bg:#eaf5ee;--line:#dce8df;--text:#1a3529;--muted:#6a8074;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.head{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.crest{width:48px;height:48px;border-radius:15px;display:block;object-fit:cover;flex-shrink:0}.brand-name{font-weight:800;color:var(--deep);line-height:1.2}.brand-name small{display:block;font-weight:500;color:var(--muted);font-size:12px;margin-top:5px}.nav{display:flex;align-items:center;gap:7px}.nav a{padding:10px 12px;border-radius:10px;color:#4d675a;font-weight:650;font-size:14px}.nav a:hover{background:var(--mint);color:var(--green)}.nav .login{background:var(--green);color:#fff;padding:11px 17px}.menu{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;color:var(--deep)}
+.hero{padding:43px 0 28px}.hero-box{border-radius:27px;background:linear-gradient(120deg,#103e2d 0%,#126b45 64%,#168958 100%);color:#fff;padding:clamp(28px,5vw,62px);position:relative;overflow:hidden;display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:24px;min-height:360px}.hero-box:after{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-80px;top:-105px;box-shadow:0 0 0 36px rgba(255,255,255,.035),0 0 0 75px rgba(255,255,255,.025)}.kicker{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:800;color:#c7ead5}.hero h1{font-size:clamp(32px,4.7vw,54px);letter-spacing:-.04em;line-height:1.07;margin:15px 0 19px;max-width:730px}.hero p{max-width:630px;color:#d8eee0;font-size:16px;margin:0 0 26px}.actions{display:flex;gap:11px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:11px;padding:12px 17px;font-weight:750;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px)}.btn-light{background:#fff;color:var(--deep)}.btn-glass{border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.08);color:#fff}.hero-mark{position:relative;z-index:1;justify-self:center;width:min(245px,100%);aspect-ratio:1;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.07);border-radius:50%;display:grid;place-items:center}.hero-mark-inner{width:72%;aspect-ratio:1;border:1px solid rgba(255,255,255,.24);border-radius:50%;display:grid;place-items:center;overflow:hidden;background:rgba(255,255,255,.05)}.hero-mark-inner img{width:58%;height:58%;object-fit:cover;border-radius:10px}
+.section{padding:27px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:19px}h2{font-size:27px;letter-spacing:-.03em;color:var(--deep);margin:0}.section-head p{color:var(--muted);margin:6px 0 0}.small-link{font-weight:750;color:var(--green);white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);background:#fff;border-radius:18px;padding:23px;min-width:0;display:flex;flex-direction:column;box-shadow:0 5px 18px rgba(22,64,43,.025);transition:transform .18s,box-shadow .18s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(22,64,43,.08)}.card-icon{width:47px;height:47px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:23px;color:var(--green);margin-bottom:18px}.card h3{font-size:19px;line-height:1.25;color:var(--deep);margin:0 0 9px}.card p{color:var(--muted);margin:0 0 19px;font-size:14px;flex:1}.card-link{color:var(--green);font-weight:800;font-size:14px}.card-link span{font-size:18px;margin-left:5px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.about-main{background:#fff;border:1px solid var(--line);border-radius:19px;padding:clamp(23px,4vw,36px)}.about-main p{color:#5d7568}.about-aside{background:#e9f4ed;border-radius:19px;padding:clamp(23px,4vw,36px);display:flex;flex-direction:column;justify-content:center}.about-aside h3{font-size:21px;color:var(--deep);margin:0 0 12px}.about-aside p{color:#557263;margin:0}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:19px}.value{background:#fff;border:1px solid #dce9df;border-radius:12px;padding:13px;font-size:13px;font-weight:750;color:var(--deep)}.value span{display:block;color:var(--green);font-size:20px;margin-bottom:5px}
+.bottom-cta{margin:29px 0 50px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px}.bottom-cta h2{font-size:23px}.bottom-cta p{color:var(--muted);margin:6px 0 0}.btn-green{background:var(--green);color:#fff;white-space:nowrap}
+footer{background:#fff;border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.foot strong{color:var(--deep)}
+.notice{font-size:12px;color:var(--muted);margin-top:8px}
+
+.modal-backdrop{position:fixed;inset:0;background:rgba(8,31,21,.62);z-index:30;display:none;align-items:center;justify-content:center;padding:18px;overflow-y:auto}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;width:min(600px,100%);max-height:min(90vh,850px);overflow-y:auto;border-radius:22px;box-shadow:0 24px 80px rgba(0,0,0,.24);padding:clamp(20px,4vw,32px);position:relative}
+.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:7px}
+.modal-head h2{font-size:25px;line-height:1.2}
+.modal-close{border:0;background:var(--mint);color:var(--deep);width:38px;height:38px;border-radius:11px;font-size:22px;flex-shrink:0}
+.modal-subtitle{color:var(--muted);margin:0 0 22px;font-size:14px}
+.modal .field{display:grid;gap:6px;margin-bottom:16px}
+.modal label{font-weight:700;color:#345748;font-size:13px}
+.modal input[type=text],.modal textarea{width:100%;border:1px solid #d6e3da;background:#fff;border-radius:10px;padding:12px 13px;color:var(--text);font:inherit}
+.modal textarea{resize:vertical;min-height:125px}
+.file-drop{border:1.5px dashed #b9d4c3;border-radius:13px;padding:18px;text-align:center;background:#f7fbf8;cursor:pointer}
+.file-drop:hover{border-color:var(--green);background:var(--mint)}
+.file-drop strong{display:block;color:var(--deep);margin:4px 0}
+.file-drop span{display:block;color:var(--muted);font-size:12px}
+.file-list{display:grid;gap:8px;margin-top:10px}
+.file-item{display:flex;align-items:center;gap:10px;padding:9px 11px;background:#f3f7f4;border-radius:9px;font-size:13px}
+.file-item .file-name{overflow-wrap:anywhere;flex:1}
+.file-item button{border:0;background:transparent;color:#a33b30;font-weight:700;padding:4px}
+.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px;flex-wrap:wrap}
+.modal-success{text-align:center;padding:18px 5px}
+.modal-success .success-mark{width:58px;height:58px;background:var(--mint);color:var(--green);border-radius:50%;display:grid;place-items:center;font-size:28px;margin:0 auto 15px}
+.modal-success h3{color:var(--deep);margin:0 0 8px;font-size:23px}
+.modal-success p{color:var(--muted);margin:0 0 20px}
+
+@media(max-width:850px){.head{height:auto;min-height:75px;flex-wrap:wrap;padding:12px 0}.nav{gap:2px}.nav a{font-size:13px;padding:9px}.hero-box{grid-template-columns:1fr .38fr}.hero-mark{width:170px}.hero-mark-inner{font-size:58px}.cards{gap:12px}.card{padding:19px}.about{gap:14px}}
+@media(max-width:640px){.wrap{width:calc(100% - 24px)}.head{gap:12px}.brand-name{font-size:14px}.brand-name small{font-size:11px}.crest{width:41px;height:41px}.menu{display:block}.nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding-bottom:6px}.nav.open{display:flex}.nav a{padding:11px 12px}.hero{padding-top:19px}.hero-box{grid-template-columns:1fr;padding:28px 23px;min-height:0;border-radius:20px}.hero-mark{display:none}.hero h1{font-size:37px}.hero p{font-size:14px}.section-head{align-items:start}.section-head h2{font-size:24px}.cards{grid-template-columns:1fr}.card{padding:20px}.card-icon{margin-bottom:13px}.about{grid-template-columns:1fr}.values{grid-template-columns:1fr}.bottom-cta{align-items:flex-start;flex-direction:column;padding:23px}.bottom-cta h2{font-size:21px}.btn-green{width:100%}.section{padding:20px 0}}
+
+/* Вариант единого оформления с рейтингом */
+:root{--green:#10965b;--green2:#18a568;--deep:#073b2b;--mint:#eff9f3;--bg:#eaf5ee;--line:#dce8df;--text:#1a3529;--muted:#6a8074}
+body{background:var(--bg);color:var(--text)}
+header{background:transparent;border:0;padding-top:22px}
+.head{height:auto;min-height:78px;padding:14px 20px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 22px rgba(22,64,43,.04)}
+.crest{background:var(--green);border-radius:14px}
+.brand-name,.brand-name small{color:var(--deep)}
+.nav a{border-radius:9px;color:var(--muted)}
+.nav a:hover,.nav a:focus-visible{background:var(--mint);color:var(--green)}
+.nav .login{background:var(--green);color:#fff}
+.hero{padding-top:30px}
+.hero-box{background:linear-gradient(120deg,#073b2b 0%,#0c7548 64%,#10965b 100%);border-radius:22px;box-shadow:0 12px 30px rgba(16,150,91,.12)}
+.kicker{color:#c7ead5}.hero p{color:#d8eee0}
+h2,.card h3,.about-aside h3{color:var(--deep)}
+.card,.about-main,.bottom-cta{border-color:var(--line);box-shadow:0 5px 22px rgba(22,64,43,.035)}
+.card-icon,.about-aside{background:var(--mint);color:var(--green)}
+.value{border-color:var(--line);color:var(--deep)}
+footer{background:#fff;border-color:var(--line)}
+.btn-green{background:var(--green)}
+.btn-glass{border-color:rgba(255,255,255,.4)}
+@media(max-width:640px){header{padding-top:12px}.head{border-radius:14px;padding:12px}.nav{background:#fff;border-radius:12px}.nav.open{padding:8px}.nav a{border-radius:9px}}
+
+/* v62 compact layout: align the management pages with the tighter Tasks interface */
+body{font-size:13px!important;line-height:1.42!important}
+.app{max-width:1280px!important;margin:0 auto!important;padding:14px 18px 28px!important;min-height:100vh!important}
+.side{padding:14px 11px!important;gap:17px!important;border-radius:15px!important}
+.brand img{width:36px!important;height:36px!important;border-radius:9px!important}
+.side .nav{gap:3px!important}
+.side .nav a,.side .nav button{font-size:12px!important;padding:8px 10px!important;border-radius:9px!important}
+.label{font-size:9px!important;margin-bottom:5px!important}
+.main{margin-top:12px!important;min-width:0!important}
+.top{height:auto!important;min-height:54px!important;padding:10px 16px!important;border-radius:13px!important;gap:10px!important}
+.top h1{font-size:15px!important;line-height:1.3!important}
+.content{max-width:1160px!important;padding:15px 0 0!important;margin:0 auto!important}
+.heading{gap:10px!important;margin-bottom:14px!important}
+.heading h2{font-size:20px!important;line-height:1.25!important}
+.heading p{font-size:12px!important;margin-top:4px!important}
+.notice{padding:9px 11px!important;margin-bottom:11px!important;font-size:11px!important;border-radius:10px!important}
+.stat{padding:12px!important;border-radius:11px!important}
+.num{font-size:24px!important;margin-top:5px!important}
+.stats{gap:9px!important;margin-bottom:13px!important}
+.panel{border-radius:12px!important;margin-bottom:11px!important}
+.ph{padding:11px 13px!important;font-size:12px!important}
+.pb{padding:13px!important}
+.btn{font-size:12px!important;padding:8px 11px!important;border-radius:8px!important}
+.quick{gap:7px!important}
+.quick button{padding:10px!important;border-radius:9px!important;font-size:12px!important}
+.quick button span{font-size:18px!important;margin-bottom:4px!important}
+.toolbar{gap:6px!important;margin-bottom:10px!important}
+.toolbar input,.toolbar select,.field input,.field select,.field textarea{font-size:12px!important;padding:8px 9px!important;border-radius:8px!important}
+th,td{padding:9px 11px!important;font-size:11px!important}
+th{font-size:10px!important}
+.field{gap:5px!important;margin-bottom:10px!important}
+.field label{font-size:11px!important}
+.event{padding:10px 0!important}
+.event h3{font-size:13px!important}
+.role{padding:13px!important;border-radius:11px!important}
+@media(max-width:900px){.app{padding:11px!important}.content{padding-top:12px!important}}
+@media(max-width:650px){.app{padding:8px!important}.side{padding:11px!important;gap:10px!important}.top{padding:9px 11px!important;flex-wrap:wrap!important}.content{padding-top:10px!important}.heading h2{font-size:18px!important}.stats{gap:7px!important}.stat{padding:10px!important}.num{font-size:22px!important}.pb{padding:11px!important}.ph{padding:10px 11px!important}}
+
+
+/* v63: unify reports and all role pages with the compact Tasks UI */
+:root{--g:#0d965b;--d:#073b2b;--mint:#eaf5ef;--bg:#eff7f2;--line:#d9e8de;--muted:#698477}
+body:not(.tasks-page){background:#eff7f2!important;color:#073b2b!important;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;font-size:13px!important;line-height:1.42!important}
+body:not(.tasks-page) .content{max-width:1160px!important;margin:0 auto!important;padding:15px 18px 28px!important}
+body:not(.tasks-page) .app{max-width:1280px!important;margin:0 auto!important}
+body:not(.tasks-page) .top,body:not(.tasks-page) .heading{background:#fff!important;border:1px solid #d9e8de!important;border-radius:14px!important;box-shadow:0 3px 12px rgba(7,59,43,.035)!important}
+body:not(.tasks-page) .top{min-height:54px!important;height:auto!important;padding:10px 16px!important}
+body:not(.tasks-page) .top h1{font-size:15px!important;line-height:1.3!important;color:#073b2b!important}
+body:not(.tasks-page) .heading{padding:13px 15px!important;margin:0 0 13px!important}
+body:not(.tasks-page) .heading h2{font-size:20px!important;line-height:1.25!important;color:#073b2b!important}
+body:not(.tasks-page) .heading p{font-size:12px!important;color:#698477!important;margin-top:4px!important}
+body:not(.tasks-page) .side{background:#073b2b!important;border-right:1px solid #d9e8de!important;padding:14px 11px!important;gap:17px!important}
+body:not(.tasks-page) .brand img{width:36px!important;height:36px!important;border-radius:9px!important}
+body:not(.tasks-page) .side .brand small,body:not(.tasks-page) .label{color:#b8d9c8!important}
+body:not(.tasks-page) .label{font-size:9px!important;margin-bottom:5px!important}
+body:not(.tasks-page) .side .nav{gap:3px!important}
+body:not(.tasks-page) .side .nav a,body:not(.tasks-page) .side .nav button{font-size:12px!important;padding:8px 10px!important;border-radius:9px!important}
+body:not(.tasks-page) .nav a.active,body:not(.tasks-page) .nav button.active{background:#eaf5ef!important;color:#073b2b!important}
+body:not(.tasks-page) .stat,body:not(.tasks-page) .panel,body:not(.tasks-page) .card,body:not(.tasks-page) .tile,body:not(.tasks-page) .role{background:#fff!important;border:1px solid #d9e8de!important;border-radius:12px!important;box-shadow:0 3px 12px rgba(7,59,43,.035)!important}
+body:not(.tasks-page) .stats{gap:9px!important;margin-bottom:13px!important}
+body:not(.tasks-page) .stat{padding:12px!important}
+body:not(.tasks-page) .num{font-size:24px!important;margin-top:5px!important;color:#073b2b!important}
+body:not(.tasks-page) .ph{padding:11px 13px!important;border-bottom:1px solid #e5efe8!important}
+body:not(.tasks-page) .pb{padding:13px!important}
+body:not(.tasks-page) .btn,body:not(.tasks-page) button,body:not(.tasks-page) .tiny{font-size:12px!important;border-radius:9px!important}
+body:not(.tasks-page) .btn{padding:8px 11px!important}
+body:not(.tasks-page) .green,body:not(.tasks-page) .btn-primary,body:not(.tasks-page) button.primary,body:not(.tasks-page) .primary,body:not(.tasks-page) .tiny.green{background:#0d965b!important;border-color:#0d965b!important;color:#fff!important}
+body:not(.tasks-page) .soft,body:not(.tasks-page) .line{background:#eaf5ef!important;border-color:#d9e8de!important;color:#0d6845!important}
+body:not(.tasks-page) .toolbar{gap:7px!important;margin-bottom:10px!important;align-items:center!important}
+body:not(.tasks-page) input,body:not(.tasks-page) select,body:not(.tasks-page) textarea,body:not(.tasks-page) .toolbar input,body:not(.tasks-page) .toolbar select,body:not(.tasks-page) .field input,body:not(.tasks-page) .field select,body:not(.tasks-page) .field textarea{font-size:12px!important;padding:8px 9px!important;border:1px solid #d9e8de!important;border-radius:8px!important;background:#fff!important}
+body:not(.tasks-page) th{background:#f4faf6!important;color:#526f60!important;font-size:10px!important}
+body:not(.tasks-page) td,body:not(.tasks-page) th{padding:9px 11px!important;border-color:#e5efe8!important;font-size:11px!important}
+body:not(.tasks-page) tr:hover td{background:#f8fcf9!important}
+body:not(.tasks-page) .pill,body:not(.tasks-page) .pending,body:not(.tasks-page) .rejected{border-radius:999px!important}
+body:not(.tasks-page) .notice{padding:9px 11px!important;margin-bottom:11px!important;font-size:11px!important;border-radius:10px!important}
+body:not(.tasks-page) .quick{gap:7px!important}
+body:not(.tasks-page) .quick button{padding:10px!important;border-radius:9px!important;font-size:12px!important}
+body:not(.tasks-page) .quick button span{font-size:18px!important;margin-bottom:4px!important}
+body:not(.tasks-page) .field{gap:5px!important;margin-bottom:10px!important}
+body:not(.tasks-page) .field label{font-size:11px!important}
+body:not(.tasks-page) .event{padding:10px 0!important}
+body:not(.tasks-page) .event h3{font-size:13px!important}
+body:not(.tasks-page) .table-wrap{max-width:100%!important;overflow:auto!important;border-radius:0 0 12px 12px!important}
+body:not(.tasks-page) table{min-width:600px}
+@media(max-width:900px){body:not(.tasks-page) .app{padding:11px!important}body:not(.tasks-page) .content{padding:12px 12px 22px!important}}
+@media(max-width:650px){body:not(.tasks-page) .app{padding:8px!important}body:not(.tasks-page) .side{padding:11px!important;gap:10px!important}body:not(.tasks-page) .top{padding:9px 11px!important;flex-wrap:wrap!important}body:not(.tasks-page) .content{padding:10px 8px 18px!important}body:not(.tasks-page) .heading h2{font-size:18px!important}body:not(.tasks-page) .stats{gap:7px!important}body:not(.tasks-page) .stat{padding:10px!important}body:not(.tasks-page) .num{font-size:22px!important}body:not(.tasks-page) .pb{padding:11px!important}body:not(.tasks-page) .ph{padding:10px 11px!important}}
+
+</style>
+</head>
+<body>
+<header><div class="wrap head">
+  <a class="brand" href="#top"><img class="crest" src="assets/molodezh-logo.jpeg" alt="Логотип Молодёжного совета"><span class="brand-name">Молодёжный совет<small>Правительства Тульской области</small></span></a>
+  <button class="menu" id="menuButton" aria-expanded="false" aria-controls="mainNav">☰ Меню</button>
+  <nav class="nav" id="mainNav">
+    <a href="#about">О совете</a><a href="#sections">Разделы</a><a href="rating.html">Рейтинг участников</a><a href="molodezh_meropriyatiya.html">Мероприятия</a><a class="login" href="login.html">Войти в аккаунт&nbsp; ↗</a>
+  </nav>
+</div></header>
+<main class="wrap" id="top">
+  <section class="hero"><div class="hero-box">
+    <div><div class="kicker">Идеи молодых. Возможности региона.</div>
+      <h1>Молодёжь, которая меняет регион</h1>
+      <p>Площадка для инициатив, профессионального развития и совместной работы молодых специалистов на благо Тульской области.</p>
+      <div class="actions"><a class="btn btn-light" href="#sections">Открыть портал&nbsp; ↗</a><a class="btn btn-glass" href="molodezh_meropriyatiya.html">Ближайшие мероприятия&nbsp; →</a><button class="btn btn-glass" type="button" data-open-idea>＋ Предложить идею</button></div>
+    </div><div class="hero-mark" aria-hidden="true"><div class="hero-mark-inner"><img src="assets/molodezh-logo.jpeg" alt=""></div></div>
+  </div></section>
+
+  <section class="section" id="sections">
+    <div class="section-head"><div><h2>Возможности портала</h2><p>Все основные инструменты Молодёжного совета в одном месте.</p></div></div>
+    <div class="cards">
+      <a class="card" href="login.html"><div class="card-icon">↗</div><h3>Личный кабинет</h3><p>Вход в аккаунт, персональная информация и доступ к рабочим разделам совета.</p><span class="card-link">Перейти ко входу <span>→</span></span></a>
+      <a class="card" href="rating.html"><div class="card-icon">★</div><h3>Рейтинг участников</h3><p>Результаты активности, достижения и вклад участников в работу Молодёжного совета.</p><span class="card-link">Открыть рейтинг <span>→</span></span></a>
+      <a class="card" href="molodezh_meropriyatiya.html"><div class="card-icon">▦</div><h3>Мероприятия</h3><p>Анонсы событий, подробная информация и запись на участие.</p><span class="card-link">Смотреть мероприятия <span>→</span></span></a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-head"><div><h2>О Молодёжном совете</h2><p>Объединяем инициативных молодых специалистов.</p></div></div>
+    <div class="about">
+      <div class="about-main"><h3 style="font-size:21px;color:var(--deep);margin:0 0 12px">Диалог, инициативы и реальные дела</h3><p>Молодёжный совет — пространство для обмена опытом, обсуждения предложений и участия в проектах, направленных на развитие Тульской области.</p><p>Портал поможет участникам следить за мероприятиями, видеть результаты работы и оставаться на связи с командой.</p></div>
+      <div class="about-aside"><h3>У каждого есть возможность внести вклад</h3><p>Предлагай идеи, участвуй в событиях и развивай проекты вместе с другими молодыми специалистами.</p><div class="values"><div class="value"><span>✦</span>Инициатива</div><div class="value"><span>◎</span>Команда</div><div class="value"><span>↗</span>Развитие</div></div></div>
+    </div>
+  </section>
+
+  <section class="bottom-cta" id="account"><div><h2>Готов подключиться к работе?</h2><p>Начни с ближайших мероприятий или предложи свою идею.</p></div><div class="actions"><a class="btn" style="background:var(--mint);color:var(--green)" href="molodezh_meropriyatiya.html">К мероприятиям</a><button class="btn" style="background:#f2f7f3;color:var(--green)" type="button" data-open-idea>Предложить идею</button></div></section>
+</main>
+
+<div class="modal-backdrop" id="ideaModal" aria-hidden="true">
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="ideaModalTitle">
+    <div id="ideaFormView">
+      <div class="modal-head"><h2 id="ideaModalTitle">Предложить идею</h2><button class="modal-close" type="button" id="closeIdeaModal" aria-label="Закрыть окно">×</button></div>
+      <p class="modal-subtitle">Расскажи о своей инициативе. При необходимости приложи документы, презентацию или другие материалы.</p>
+      <form id="ideaForm">
+        <div class="field"><label for="ideaTitle">Заголовок идеи *</label><input id="ideaTitle" name="title" type="text" required maxlength="160" placeholder="Кратко сформулируй идею"></div>
+        <div class="field"><label for="ideaDescription">Описание *</label><textarea id="ideaDescription" name="description" required minlength="5" maxlength="5000" placeholder="В чём заключается идея, для кого она и что поможет реализовать её?"></textarea></div>
+        <div class="field"><label>Прикрепить файлы <span style="font-weight:500;color:var(--muted)">(необязательно)</span></label>
+          <label class="file-drop" for="ideaFiles"><span style="font-size:25px">＋</span><strong>Выбрать файлы</strong><span>Документы, PDF, презентации или изображения</span><span>До 5 файлов, максимум 10 МБ каждый</span></label>
+          <input id="ideaFiles" type="file" multiple hidden accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.jpg,.jpeg,.png,.webp">
+          <div class="file-list" id="ideaFileList"></div>
+        </div>
+        <div class="field"><label for="ideaAuthor">Имя или контакт <span style="font-weight:500;color:var(--muted)">(необязательно)</span></label><input id="ideaAuthor" name="author" type="text" maxlength="160" placeholder="Как с тобой связаться"></div>
+        <p class="notice">Пока это демонстрационная форма: данные и выбранные файлы не отправляются на сервер. После подключения серверной части идеи смогут поступать ответственным сотрудникам.</p>
+        <div class="modal-actions"><button class="btn" type="button" id="cancelIdea" style="background:#f0f4f1;color:var(--deep)">Отмена</button><button class="btn btn-green" type="submit">Отправить идею</button></div>
+      </form>
+    </div>
+    <div id="ideaSuccessView" class="modal-success" hidden><div class="success-mark">✓</div><h3>Идея подготовлена</h3><p id="ideaSuccessText">Форма заполнена. Для реальной отправки нужно подключить сервер.</p><button class="btn btn-green" type="button" id="finishIdea">Готово</button></div>
+  </section>
+</div>
+
+<footer><div class="wrap foot"><span><strong>Молодёжный совет Правительства Тульской области</strong></span><span>Официальный портал · Демонстрационная концепция</span></div></footer>
+<script>
+(function(){
+const menu=document.getElementById('menuButton'),nav=document.getElementById('mainNav');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕ Закрыть':'☰ Меню'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰ Меню'}));
+
+const modal=document.getElementById('ideaModal'),ideaForm=document.getElementById('ideaForm'),fileInput=document.getElementById('ideaFiles'),fileList=document.getElementById('ideaFileList');
+let selectedFiles=[];
+function openIdea(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';document.getElementById('ideaFormView').hidden=false;document.getElementById('ideaSuccessView').hidden=true;setTimeout(()=>document.getElementById('ideaTitle').focus(),50)}
+function closeIdea(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+document.querySelectorAll('[data-open-idea]').forEach(b=>b.addEventListener('click',openIdea));
+document.getElementById('closeIdeaModal').addEventListener('click',closeIdea);
+document.getElementById('cancelIdea').addEventListener('click',closeIdea);
+document.getElementById('finishIdea').addEventListener('click',()=>{closeIdea();ideaForm.reset();selectedFiles=[];renderIdeaFiles()});
+modal.addEventListener('click',e=>{if(e.target===modal)closeIdea()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeIdea()});
+function renderIdeaFiles(){fileList.innerHTML='';selectedFiles.forEach((file,index)=>{const row=document.createElement('div');row.className='file-item';const icon=document.createElement('span');icon.textContent='📎';const name=document.createElement('span');name.className='file-name';name.textContent=file.name+' · '+(file.size/1024/1024).toFixed(2)+' МБ';const remove=document.createElement('button');remove.type='button';remove.textContent='Убрать';remove.setAttribute('aria-label','Убрать файл '+file.name);remove.addEventListener('click',()=>{selectedFiles.splice(index,1);syncFileInput();renderIdeaFiles()});row.append(icon,name,remove);fileList.appendChild(row)})}
+function syncFileInput(){const dt=new DataTransfer();selectedFiles.forEach(f=>dt.items.add(f));fileInput.files=dt.files}
+fileInput.addEventListener('change',()=>{const incoming=Array.from(fileInput.files);for(const file of incoming){if(selectedFiles.some(f=>f.name===file.name&&f.size===file.size))continue;if(selectedFiles.length>=5){alert('Можно прикрепить не более 5 файлов.');break}if(file.size>10*1024*1024){alert('Файл «'+file.name+'» больше 10 МБ и не добавлен.');continue}selectedFiles.push(file)}syncFileInput();renderIdeaFiles()});
+ideaForm.addEventListener('submit',e=>{e.preventDefault();const item={id:'IDEA-'+Date.now().toString().slice(-8),title:document.getElementById('ideaTitle').value.trim(),description:document.getElementById('ideaDescription').value.trim(),author:document.getElementById('ideaAuthor').value.trim(),files:selectedFiles.map(f=>({name:f.name,size:f.size,type:f.type})),createdAt:new Date().toISOString(),status:'Черновик — демонстрация'};try{const old=JSON.parse(localStorage.getItem('youth_ideas_demo')||'[]');old.push(item);localStorage.setItem('youth_ideas_demo',JSON.stringify(old))}catch(err){}document.getElementById('ideaSuccessText').textContent='Заголовок: «'+item.title+'». Прикреплено файлов: '+item.files.length+'. Сейчас это демонстрация: файлы не загружаются на сервер.';document.getElementById('ideaFormView').hidden=true;document.getElementById('ideaSuccessView').hidden=false});
+
+})();
+</script>
+<script src="auth-local.js"></script>
+<style id="ms-notification-styles">
+#ms-toast-stack{position:fixed;z-index:100000;top:20px;right:20px;width:min(390px,calc(100vw - 28px));display:flex;flex-direction:column;gap:10px;pointer-events:none;font-family:inherit}
+.ms-toast{pointer-events:auto;display:grid;grid-template-columns:42px minmax(0,1fr) 28px;gap:12px;align-items:start;background:var(--card,#fff);color:var(--text,#17231d);border:1px solid rgba(22,121,75,.14);border-radius:16px;padding:15px 14px;box-shadow:0 14px 40px rgba(20,38,28,.16);animation:msToastIn .24s ease-out both;backdrop-filter:blur(12px)}
+.ms-toast-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px;font-weight:700;background:#e1f5e9;color:#16794b}.ms-toast[data-kind="error"] .ms-toast-icon{background:#fde8e7;color:#b42318}.ms-toast[data-kind="warning"] .ms-toast-icon{background:#fff0d9;color:#a96809}.ms-toast-title{font-size:14px;font-weight:750;margin:1px 0 4px}.ms-toast-message{font-size:13px;line-height:1.5;color:var(--muted,#66756c);overflow-wrap:anywhere}.ms-toast-close{border:0;background:transparent;color:#87938c;font-size:21px;line-height:1;cursor:pointer;padding:0}.ms-toast-bar{height:3px;background:#e6eee9;border-radius:5px;margin-top:11px;overflow:hidden}.ms-toast-bar span{display:block;height:100%;background:#16794b;animation:msToastProgress linear forwards}.ms-toast[data-kind="error"] .ms-toast-bar span{background:#b42318}.ms-toast[data-kind="warning"] .ms-toast-bar span{background:#d99a2b}
+#ms-dialog-layer{position:fixed;inset:0;z-index:100001;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(17,29,22,.38);backdrop-filter:blur(5px)}#ms-dialog-layer.open{display:flex;animation:msFadeIn .18s ease-out}#ms-dialog{width:min(480px,100%);background:var(--card,#fff);color:var(--text,#17231d);border:1px solid rgba(22,121,75,.16);border-radius:22px;padding:26px;box-shadow:0 24px 80px rgba(15,30,20,.24);animation:msDialogIn .22s ease-out}#ms-dialog-head{display:flex;gap:14px;align-items:center;margin-bottom:17px}#ms-dialog-icon{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:15px;background:#e1f5e9;color:#16794b;font-size:24px}#ms-dialog-title{font-size:22px;line-height:1.25;font-weight:780;letter-spacing:-.4px}#ms-dialog-message{font-size:15px;line-height:1.65;color:var(--muted,#59675f);white-space:pre-line;overflow-wrap:anywhere}#ms-dialog-input{box-sizing:border-box;width:100%;margin-top:16px;padding:12px 13px;border:1px solid #d9e2dc;border-radius:11px;font:inherit;font-size:15px;color:inherit;background:var(--card,#fff);outline:none}#ms-dialog-input:focus{border-color:#168451;box-shadow:0 0 0 3px rgba(22,132,81,.12)}#ms-dialog-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:25px;flex-wrap:wrap}#ms-dialog-actions button{border:0;border-radius:11px;padding:11px 21px;min-width:100px;font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:transform .15s,filter .15s}#ms-dialog-actions button:hover{filter:brightness(.97);transform:translateY(-1px)}#ms-dialog-cancel{background:#f0f2f1;color:#26332b}#ms-dialog-ok{background:#16794b;color:#fff}#ms-dialog-ok.danger{background:#b42318}#ms-dialog-close{margin-left:auto;border:0;background:transparent;color:#7b8980;font-size:24px;cursor:pointer}
+@keyframes msToastIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes msFadeIn{from{opacity:0}to{opacity:1}}@keyframes msDialogIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes msToastProgress{from{width:100%}to{width:0}}@media(max-width:560px){#ms-toast-stack{top:10px;right:10px;width:calc(100vw - 20px)}#ms-dialog{padding:21px;border-radius:19px}#ms-dialog-title{font-size:20px}#ms-dialog-actions{display:grid;grid-template-columns:1fr 1fr}#ms-dialog-actions button{min-width:0}}@media(prefers-reduced-motion:reduce){.ms-toast,#ms-dialog-layer{animation:none!important}#ms-dialog-actions button{transition:none!important}.ms-toast-bar span{animation:none!important}}
+</style>
+<div id="ms-toast-stack" aria-live="polite" aria-atomic="false"></div>
+<div id="ms-dialog-layer" aria-hidden="true"><section id="ms-dialog" role="dialog" aria-modal="true" aria-labelledby="ms-dialog-title" aria-describedby="ms-dialog-message"><div id="ms-dialog-head"><div id="ms-dialog-icon">✓</div><div id="ms-dialog-title">Подтвердите действие</div><button id="ms-dialog-close" type="button" aria-label="Закрыть">×</button></div><div id="ms-dialog-message"></div><input id="ms-dialog-input" type="text" hidden><div id="ms-dialog-actions"><button id="ms-dialog-cancel" type="button">Отмена</button><button id="ms-dialog-ok" type="button">Продолжить</button></div></section></div>
+<script id="ms-notification-system">(()=>{'use strict';if(window.MSNotify)return;const $=id=>document.getElementById(id),stack=$('ms-toast-stack'),layer=$('ms-dialog-layer');if(!stack||!layer)return;const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let resolveDialog=null,previousFocus=null;function toast(message,kind='success',title){const titles={success:'Готово',error:'Что-то пошло не так',warning:'Обратите внимание',info:'Информация'},icons={success:'✓',error:'!',warning:'!',info:'i'};const el=document.createElement('div');el.className='ms-toast';el.dataset.kind=kind;const duration=kind==='error'?6500:4200;el.innerHTML='<div class="ms-toast-icon" aria-hidden="true">'+icons[kind]+'</div><div><div class="ms-toast-title">'+esc(title||titles[kind]||titles.info)+'</div><div class="ms-toast-message">'+esc(message)+'</div><div class="ms-toast-bar"><span style="animation-duration:'+duration+'ms"></span></div></div><button class="ms-toast-close" type="button" aria-label="Закрыть">×</button>';const close=()=>{if(!el.isConnected)return;el.style.opacity='0';el.style.transform='translateY(-5px)';setTimeout(()=>el.remove(),180)};el.querySelector('button').onclick=close;stack.appendChild(el);setTimeout(close,duration);return el}function dialog({title='Подтвердите действие',message='',icon='?',ok='Продолжить',cancel='Отмена',showCancel=true,danger=false,input=false,value='',placeholder='',kind='confirm'}){if(resolveDialog)resolveDialog(kind==='prompt'?null:false);return new Promise(resolve=>{resolveDialog=resolve;previousFocus=document.activeElement;$('ms-dialog-title').textContent=title;$('ms-dialog-message').textContent=message;$('ms-dialog-icon').textContent=icon;$('ms-dialog-ok').textContent=ok;$('ms-dialog-ok').classList.toggle('danger',danger);$('ms-dialog-cancel').textContent=cancel;$('ms-dialog-cancel').hidden=!showCancel;const inp=$('ms-dialog-input');inp.hidden=!input;inp.value=value||'';inp.placeholder=placeholder;layer.classList.add('open');layer.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';const finish=result=>{if(!resolveDialog)return;const r=resolveDialog;resolveDialog=null;layer.classList.remove('open');layer.setAttribute('aria-hidden','true');document.body.style.overflow='';$('ms-dialog-ok').onclick=null;$('ms-dialog-cancel').onclick=null;$('ms-dialog-close').onclick=null;layer.removeEventListener('keydown',onKey);r(result);previousFocus?.focus?.()};const onKey=e=>{if(e.key==='Escape'){e.preventDefault();finish(kind==='prompt'?null:false)}if(e.key==='Enter'&&e.target!==$('ms-dialog-cancel')){e.preventDefault();finish(kind==='prompt'?inp.value:true)}};$('ms-dialog-ok').onclick=()=>finish(kind==='prompt'?inp.value:true);$('ms-dialog-cancel').onclick=$('ms-dialog-close').onclick=()=>finish(kind==='prompt'?null:false);layer.addEventListener('keydown',onKey);layer.onclick=e=>{if(e.target===layer)finish(kind==='prompt'?null:false)};setTimeout(()=>input?inp.focus():$('ms-dialog-ok').focus(),30)})}const api={toast,success:m=>toast(m,'success'),error:m=>toast(m,'error'),warning:m=>toast(m,'warning'),info:m=>toast(m,'info'),confirm:opts=>dialog(typeof opts==='string'?{message:opts}:opts),prompt:opts=>dialog({...opts,input:true,kind:'prompt'})};window.MSNotify=api;window.alert=message=>{toast(message,'info','Сообщение')};})();</script>
+
+<style id="cookie-notice-styles">
+#ms-cookie-notice{position:fixed;left:24px;right:24px;bottom:20px;z-index:99990;display:none;align-items:center;gap:18px;padding:18px 20px;background:rgba(255,255,255,.97);border:1px solid #e1e9e3;border-radius:18px;box-shadow:0 12px 42px rgba(21,48,32,.18);backdrop-filter:blur(14px);color:#20372a;font-family:inherit}
+#ms-cookie-notice.visible{display:flex;animation:msCookieIn .25s ease-out both}
+#ms-cookie-notice .cookie-symbol{width:44px;height:44px;flex:0 0 44px;border-radius:14px;background:#e4f4e9;display:grid;place-items:center;font-size:22px;color:#16794b}
+#ms-cookie-notice .cookie-copy{flex:1;min-width:0}
+#ms-cookie-notice .cookie-title{font-size:15px;font-weight:750;margin:0 0 4px}
+#ms-cookie-notice .cookie-text{font-size:13px;line-height:1.5;color:#65756a;margin:0}
+#ms-cookie-notice .cookie-ok{border:0;border-radius:11px;padding:12px 25px;background:#16794b;color:#fff;font:inherit;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .15s,transform .15s}
+#ms-cookie-notice .cookie-ok:hover{background:#12663e;transform:translateY(-1px)}
+@keyframes msCookieIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:640px){#ms-cookie-notice{left:12px;right:12px;bottom:12px;gap:11px;padding:14px;border-radius:16px;align-items:flex-start}#ms-cookie-notice .cookie-symbol{width:36px;height:36px;flex-basis:36px;font-size:18px;border-radius:11px}#ms-cookie-notice .cookie-title{font-size:14px}#ms-cookie-notice .cookie-text{font-size:12px}#ms-cookie-notice .cookie-ok{padding:10px 14px;align-self:center}}
+@media(prefers-reduced-motion:reduce){#ms-cookie-notice.visible{animation:none}#ms-cookie-notice .cookie-ok{transition:none}}
+</style>
+<aside id="ms-cookie-notice" role="dialog" aria-label="Уведомление об использовании cookies" aria-live="polite">
+  <div class="cookie-symbol" aria-hidden="true">🍪</div>
+  <div class="cookie-copy"><p class="cookie-title">Мы используем cookies</p><p class="cookie-text">Сайт может сохранять небольшие данные в браузере, чтобы запоминать ваши настройки и корректно работать. Продолжая пользоваться сайтом, вы соглашаетесь с этим.</p></div>
+  <button class="cookie-ok" id="ms-cookie-accept" type="button">Окей</button>
+</aside>
+<script id="ms-cookie-notice-script">(()=>{const notice=document.getElementById('ms-cookie-notice');const button=document.getElementById('ms-cookie-accept');if(!notice||!button)return;const key='ms_cookie_notice_accepted_v1';try{if(localStorage.getItem(key)==='1')return}catch(e){}notice.classList.add('visible');button.addEventListener('click',()=>{notice.classList.remove('visible');try{localStorage.setItem(key,'1')}catch(e){notice.remove()}})})();</script>
+</body>
+</html>
