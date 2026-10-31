@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123d78">
+<title>Вход — Молодёжный совет</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;background:linear-gradient(135deg,#eaf2ff,#f7faff 55%,#dceaff);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#19365f}.card{width:min(460px,100%);background:#fff;border:1px solid #dbe6f6;border-radius:24px;padding:clamp(24px,5vw,38px);box-shadow:0 22px 70px #173f7618}.mark{width:54px;height:54px;border-radius:17px;background:#173f7a;color:#fff;display:grid;place-items:center;font-size:26px;margin-bottom:18px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#5377a8;font-weight:800}h1{margin:7px 0 8px;font-size:29px;letter-spacing:-.03em}.sub{margin:0 0 25px;color:#667c9c}.field{display:grid;gap:7px;margin:15px 0}.field label{font-size:13px;font-weight:750}.field input,.field select{width:100%;border:1px solid #cedbf0;border-radius:11px;padding:13px 14px;font:inherit;background:#fff;color:#19365f}.btn{width:100%;border:0;border-radius:11px;padding:13px 16px;background:#1d56a5;color:#fff;font:inherit;font-weight:800;cursor:pointer;margin-top:8px}.btn:hover{background:#164682}.msg{display:none;margin-top:14px;padding:11px 12px;border-radius:10px;background:#fff0ef;color:#a3332b;font-size:13px}.note{margin-top:20px;border-top:1px solid #e6edf8;padding-top:15px;color:#6b7f9d;font-size:12px}.mode{display:flex;gap:8px;margin:0 0 18px}.mode button{flex:1;border:1px solid #d5e1f2;border-radius:9px;background:#f7faff;color:#42628d;padding:10px;cursor:pointer;font-weight:700}.mode button.active{background:#e8f1ff;border-color:#8fb3eb;color:#174b92}.hidden{display:none!important}
+
+/* v62 compact layout: align the management pages with the tighter Tasks interface */
+body{font-size:13px!important;line-height:1.42!important}
+.app{max-width:1280px!important;margin:0 auto!important;padding:14px 18px 28px!important;min-height:100vh!important}
+.side{padding:14px 11px!important;gap:17px!important;border-radius:15px!important}
+.brand img{width:36px!important;height:36px!important;border-radius:9px!important}
+.side .nav{gap:3px!important}
+.side .nav a,.side .nav button{font-size:12px!important;padding:8px 10px!important;border-radius:9px!important}
+.label{font-size:9px!important;margin-bottom:5px!important}
+.main{margin-top:12px!important;min-width:0!important}
+.top{height:auto!important;min-height:54px!important;padding:10px 16px!important;border-radius:13px!important;gap:10px!important}
+.top h1{font-size:15px!important;line-height:1.3!important}
+.content{max-width:1160px!important;padding:15px 0 0!important;margin:0 auto!important}
+.heading{gap:10px!important;margin-bottom:14px!important}
+.heading h2{font-size:20px!important;line-height:1.25!important}
+.heading p{font-size:12px!important;margin-top:4px!important}
+.notice{padding:9px 11px!important;margin-bottom:11px!important;font-size:11px!important;border-radius:10px!important}
+.stat{padding:12px!important;border-radius:11px!important}
+.num{font-size:24px!important;margin-top:5px!important}
+.stats{gap:9px!important;margin-bottom:13px!important}
+.panel{border-radius:12px!important;margin-bottom:11px!important}
+.ph{padding:11px 13px!important;font-size:12px!important}
+.pb{padding:13px!important}
+.btn{font-size:12px!important;padding:8px 11px!important;border-radius:8px!important}
+.quick{gap:7px!important}
+.quick button{padding:10px!important;border-radius:9px!important;font-size:12px!important}
+.quick button span{font-size:18px!important;margin-bottom:4px!important}
+.toolbar{gap:6px!important;margin-bottom:10px!important}
+.toolbar input,.toolbar select,.field input,.field select,.field textarea{font-size:12px!important;padding:8px 9px!important;border-radius:8px!important}
+th,td{padding:9px 11px!important;font-size:11px!important}
+th{font-size:10px!important}
+.field{gap:5px!important;margin-bottom:10px!important}
+.field label{font-size:11px!important}
+.event{padding:10px 0!important}
+.event h3{font-size:13px!important}
+.role{padding:13px!important;border-radius:11px!important}
+@media(max-width:900px){.app{padding:11px!important}.content{padding-top:12px!important}}
+@media(max-width:650px){.app{padding:8px!important}.side{padding:11px!important;gap:10px!important}.top{padding:9px 11px!important;flex-wrap:wrap!important}.content{padding-top:10px!important}.heading h2{font-size:18px!important}.stats{gap:7px!important}.stat{padding:10px!important}.num{font-size:22px!important}.pb{padding:11px!important}.ph{padding:10px 11px!important}}
+
+
+/* v63: unify reports and all role pages with the compact Tasks UI */
+:root{--g:#0d965b;--d:#073b2b;--mint:#eaf5ef;--bg:#eff7f2;--line:#d9e8de;--muted:#698477}
+body:not(.tasks-page){background:#eff7f2!important;color:#073b2b!important;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;font-size:13px!important;line-height:1.42!important}
+body:not(.tasks-page) .content{max-width:1160px!important;margin:0 auto!important;padding:15px 18px 28px!important}
+body:not(.tasks-page) .app{max-width:1280px!important;margin:0 auto!important}
+body:not(.tasks-page) .top,body:not(.tasks-page) .heading{background:#fff!important;border:1px solid #d9e8de!important;border-radius:14px!important;box-shadow:0 3px 12px rgba(7,59,43,.035)!important}
+body:not(.tasks-page) .top{min-height:54px!important;height:auto!important;padding:10px 16px!important}
+body:not(.tasks-page) .top h1{font-size:15px!important;line-height:1.3!important;color:#073b2b!important}
+body:not(.tasks-page) .heading{padding:13px 15px!important;margin:0 0 13px!important}
+body:not(.tasks-page) .heading h2{font-size:20px!important;line-height:1.25!important;color:#073b2b!important}
+body:not(.tasks-page) .heading p{font-size:12px!important;color:#698477!important;margin-top:4px!important}
+body:not(.tasks-page) .side{background:#073b2b!important;border-right:1px solid #d9e8de!important;padding:14px 11px!important;gap:17px!important}
+body:not(.tasks-page) .brand img{width:36px!important;height:36px!important;border-radius:9px!important}
+body:not(.tasks-page) .side .brand small,body:not(.tasks-page) .label{color:#b8d9c8!important}
+body:not(.tasks-page) .label{font-size:9px!important;margin-bottom:5px!important}
+body:not(.tasks-page) .side .nav{gap:3px!important}
+body:not(.tasks-page) .side .nav a,body:not(.tasks-page) .side .nav button{font-size:12px!important;padding:8px 10px!important;border-radius:9px!important}
+body:not(.tasks-page) .nav a.active,body:not(.tasks-page) .nav button.active{background:#eaf5ef!important;color:#073b2b!important}
+body:not(.tasks-page) .stat,body:not(.tasks-page) .panel,body:not(.tasks-page) .card,body:not(.tasks-page) .tile,body:not(.tasks-page) .role{background:#fff!important;border:1px solid #d9e8de!important;border-radius:12px!important;box-shadow:0 3px 12px rgba(7,59,43,.035)!important}
+body:not(.tasks-page) .stats{gap:9px!important;margin-bottom:13px!important}
+body:not(.tasks-page) .stat{padding:12px!important}
+body:not(.tasks-page) .num{font-size:24px!important;margin-top:5px!important;color:#073b2b!important}
+body:not(.tasks-page) .ph{padding:11px 13px!important;border-bottom:1px solid #e5efe8!important}
+body:not(.tasks-page) .pb{padding:13px!important}
+body:not(.tasks-page) .btn,body:not(.tasks-page) button,body:not(.tasks-page) .tiny{font-size:12px!important;border-radius:9px!important}
+body:not(.tasks-page) .btn{padding:8px 11px!important}
+body:not(.tasks-page) .green,body:not(.tasks-page) .btn-primary,body:not(.tasks-page) button.primary,body:not(.tasks-page) .primary,body:not(.tasks-page) .tiny.green{background:#0d965b!important;border-color:#0d965b!important;color:#fff!important}
+body:not(.tasks-page) .soft,body:not(.tasks-page) .line{background:#eaf5ef!important;border-color:#d9e8de!important;color:#0d6845!important}
+body:not(.tasks-page) .toolbar{gap:7px!important;margin-bottom:10px!important;align-items:center!important}
+body:not(.tasks-page) input,body:not(.tasks-page) select,body:not(.tasks-page) textarea,body:not(.tasks-page) .toolbar input,body:not(.tasks-page) .toolbar select,body:not(.tasks-page) .field input,body:not(.tasks-page) .field select,body:not(.tasks-page) .field textarea{font-size:12px!important;padding:8px 9px!important;border:1px solid #d9e8de!important;border-radius:8px!important;background:#fff!important}
+body:not(.tasks-page) th{background:#f4faf6!important;color:#526f60!important;font-size:10px!important}
+body:not(.tasks-page) td,body:not(.tasks-page) th{padding:9px 11px!important;border-color:#e5efe8!important;font-size:11px!important}
+body:not(.tasks-page) tr:hover td{background:#f8fcf9!important}
+body:not(.tasks-page) .pill,body:not(.tasks-page) .pending,body:not(.tasks-page) .rejected{border-radius:999px!important}
+body:not(.tasks-page) .notice{padding:9px 11px!important;margin-bottom:11px!important;font-size:11px!important;border-radius:10px!important}
+body:not(.tasks-page) .quick{gap:7px!important}
+body:not(.tasks-page) .quick button{padding:10px!important;border-radius:9px!important;font-size:12px!important}
+body:not(.tasks-page) .quick button span{font-size:18px!important;margin-bottom:4px!important}
+body:not(.tasks-page) .field{gap:5px!important;margin-bottom:10px!important}
+body:not(.tasks-page) .field label{font-size:11px!important}
+body:not(.tasks-page) .event{padding:10px 0!important}
+body:not(.tasks-page) .event h3{font-size:13px!important}
+body:not(.tasks-page) .table-wrap{max-width:100%!important;overflow:auto!important;border-radius:0 0 12px 12px!important}
+body:not(.tasks-page) table{min-width:600px}
+@media(max-width:900px){body:not(.tasks-page) .app{padding:11px!important}body:not(.tasks-page) .content{padding:12px 12px 22px!important}}
+@media(max-width:650px){body:not(.tasks-page) .app{padding:8px!important}body:not(.tasks-page) .side{padding:11px!important;gap:10px!important}body:not(.tasks-page) .top{padding:9px 11px!important;flex-wrap:wrap!important}body:not(.tasks-page) .content{padding:10px 8px 18px!important}body:not(.tasks-page) .heading h2{font-size:18px!important}body:not(.tasks-page) .stats{gap:7px!important}body:not(.tasks-page) .stat{padding:10px!important}body:not(.tasks-page) .num{font-size:22px!important}body:not(.tasks-page) .pb{padding:11px!important}body:not(.tasks-page) .ph{padding:10px 11px!important}}
+
+</style></head><body><main class="card"><div class="mark">✳</div><div class="eyebrow">Молодёжный совет</div><h1 id="heading">Вход в кабинет</h1><p class="sub" id="subheading">Введите логин и пароль своей учётной записи.</p><div class="mode" id="mode"><button type="button" class="active" id="loginTab">Войти</button><button type="button" id="setupTab">Первый запуск</button></div>
+<form id="loginForm"><div class="field"><label for="login">Логин</label><input id="login" autocomplete="username" required></div><div class="field"><label for="password">Пароль</label><input id="password" type="password" autocomplete="current-password" required></div><button class="btn">Войти</button></form>
+<form id="setupForm" class="hidden"><div class="field"><label for="fullName">ФИО администратора</label><input id="fullName" autocomplete="name" maxlength="150" required></div><div class="field"><label for="newLogin">Логин</label><input id="newLogin" autocomplete="username" minlength="3" maxlength="80" required></div><div class="field"><label for="newPassword">Пароль</label><input id="newPassword" type="password" autocomplete="new-password" minlength="6" required><small>Для локального теста минимум 6 символов.</small></div><button class="btn">Создать администратора и войти</button></form><div id="message" class="msg" role="alert"></div><div class="note">Демонстрационный режим: аккаунты и вход хранятся в localStorage этого браузера. Это не защищённая авторизация и не предназначено для публикации в интернете.</div></main>
+<script src="auth-local.js"></script><script>
+(()=>{const $=id=>document.getElementById(id),loginForm=$('loginForm'),setupForm=$('setupForm');function showSetup(force){const canSetup=window.LocalAuth.users().length===0;$('setupTab').classList.toggle('hidden',!canSetup);if(force&&canSetup){loginForm.classList.add('hidden');setupForm.classList.remove('hidden');$('loginTab').classList.remove('active');$('setupTab').classList.add('active');$('heading').textContent='Первый запуск';$('subheading').textContent='Создайте локальную учётную запись администратора.'}else{setupForm.classList.add('hidden');loginForm.classList.remove('hidden');$('loginTab').classList.add('active');$('setupTab').classList.toggle('active',false);$('heading').textContent='Вход в кабинет';$('subheading').textContent='Введите логин и пароль своей учётной записи.'}}function msg(t){$('message').textContent=t;$('message').style.display='block'}$('loginTab').onclick=()=>showSetup(false);$('setupTab').onclick=()=>showSetup(true);loginForm.onsubmit=e=>{e.preventDefault();const res=window.LocalAuth.login($('login').value,$('password').value);if(!res.ok){msg(res.message);return}window.location.href=window.LocalAuth.homeFor(res.user.role)};setupForm.onsubmit=e=>{e.preventDefault();if(window.LocalAuth.users().length){msg('Администратор уже создан. Войдите в систему.');showSetup(false);return}const res=window.LocalAuth.createFirstAdmin($('fullName').value,$('newLogin').value,$('newPassword').value);if(!res.ok){msg(res.message);return}window.location.href='admin.html'};if(window.LocalAuth.users().length===0)showSetup(true);else showSetup(false);const next=new URLSearchParams(location.search).get('next');if(next&&/^[a-z0-9_-]+\.html$/i.test(next))window.LocalAuth.setNext(next)})();
+</script><style id="ms-notification-styles">
+#ms-toast-stack{position:fixed;z-index:100000;top:20px;right:20px;width:min(390px,calc(100vw - 28px));display:flex;flex-direction:column;gap:10px;pointer-events:none;font-family:inherit}
+.ms-toast{pointer-events:auto;display:grid;grid-template-columns:42px minmax(0,1fr) 28px;gap:12px;align-items:start;background:var(--card,#fff);color:var(--text,#17231d);border:1px solid rgba(22,121,75,.14);border-radius:16px;padding:15px 14px;box-shadow:0 14px 40px rgba(20,38,28,.16);animation:msToastIn .24s ease-out both;backdrop-filter:blur(12px)}
+.ms-toast-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px;font-weight:700;background:#e1f5e9;color:#16794b}.ms-toast[data-kind="error"] .ms-toast-icon{background:#fde8e7;color:#b42318}.ms-toast[data-kind="warning"] .ms-toast-icon{background:#fff0d9;color:#a96809}.ms-toast-title{font-size:14px;font-weight:750;margin:1px 0 4px}.ms-toast-message{font-size:13px;line-height:1.5;color:var(--muted,#66756c);overflow-wrap:anywhere}.ms-toast-close{border:0;background:transparent;color:#87938c;font-size:21px;line-height:1;cursor:pointer;padding:0}.ms-toast-bar{height:3px;background:#e6eee9;border-radius:5px;margin-top:11px;overflow:hidden}.ms-toast-bar span{display:block;height:100%;background:#16794b;animation:msToastProgress linear forwards}.ms-toast[data-kind="error"] .ms-toast-bar span{background:#b42318}.ms-toast[data-kind="warning"] .ms-toast-bar span{background:#d99a2b}
+#ms-dialog-layer{position:fixed;inset:0;z-index:100001;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(17,29,22,.38);backdrop-filter:blur(5px)}#ms-dialog-layer.open{display:flex;animation:msFadeIn .18s ease-out}#ms-dialog{width:min(480px,100%);background:var(--card,#fff);color:var(--text,#17231d);border:1px solid rgba(22,121,75,.16);border-radius:22px;padding:26px;box-shadow:0 24px 80px rgba(15,30,20,.24);animation:msDialogIn .22s ease-out}#ms-dialog-head{display:flex;gap:14px;align-items:center;margin-bottom:17px}#ms-dialog-icon{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:15px;background:#e1f5e9;color:#16794b;font-size:24px}#ms-dialog-title{font-size:22px;line-height:1.25;font-weight:780;letter-spacing:-.4px}#ms-dialog-message{font-size:15px;line-height:1.65;color:var(--muted,#59675f);white-space:pre-line;overflow-wrap:anywhere}#ms-dialog-input{box-sizing:border-box;width:100%;margin-top:16px;padding:12px 13px;border:1px solid #d9e2dc;border-radius:11px;font:inherit;font-size:15px;color:inherit;background:var(--card,#fff);outline:none}#ms-dialog-input:focus{border-color:#168451;box-shadow:0 0 0 3px rgba(22,132,81,.12)}#ms-dialog-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:25px;flex-wrap:wrap}#ms-dialog-actions button{border:0;border-radius:11px;padding:11px 21px;min-width:100px;font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:transform .15s,filter .15s}#ms-dialog-actions button:hover{filter:brightness(.97);transform:translateY(-1px)}#ms-dialog-cancel{background:#f0f2f1;color:#26332b}#ms-dialog-ok{background:#16794b;color:#fff}#ms-dialog-ok.danger{background:#b42318}#ms-dialog-close{margin-left:auto;border:0;background:transparent;color:#7b8980;font-size:24px;cursor:pointer}
+@keyframes msToastIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes msFadeIn{from{opacity:0}to{opacity:1}}@keyframes msDialogIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes msToastProgress{from{width:100%}to{width:0}}@media(max-width:560px){#ms-toast-stack{top:10px;right:10px;width:calc(100vw - 20px)}#ms-dialog{padding:21px;border-radius:19px}#ms-dialog-title{font-size:20px}#ms-dialog-actions{display:grid;grid-template-columns:1fr 1fr}#ms-dialog-actions button{min-width:0}}@media(prefers-reduced-motion:reduce){.ms-toast,#ms-dialog-layer{animation:none!important}#ms-dialog-actions button{transition:none!important}.ms-toast-bar span{animation:none!important}}
+</style>
+<div id="ms-toast-stack" aria-live="polite" aria-atomic="false"></div>
+<div id="ms-dialog-layer" aria-hidden="true"><section id="ms-dialog" role="dialog" aria-modal="true" aria-labelledby="ms-dialog-title" aria-describedby="ms-dialog-message"><div id="ms-dialog-head"><div id="ms-dialog-icon">✓</div><div id="ms-dialog-title">Подтвердите действие</div><button id="ms-dialog-close" type="button" aria-label="Закрыть">×</button></div><div id="ms-dialog-message"></div><input id="ms-dialog-input" type="text" hidden><div id="ms-dialog-actions"><button id="ms-dialog-cancel" type="button">Отмена</button><button id="ms-dialog-ok" type="button">Продолжить</button></div></section></div>
+<script id="ms-notification-system">(()=>{'use strict';if(window.MSNotify)return;const $=id=>document.getElementById(id),stack=$('ms-toast-stack'),layer=$('ms-dialog-layer');if(!stack||!layer)return;const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let resolveDialog=null,previousFocus=null;function toast(message,kind='success',title){const titles={success:'Готово',error:'Что-то пошло не так',warning:'Обратите внимание',info:'Информация'},icons={success:'✓',error:'!',warning:'!',info:'i'};const el=document.createElement('div');el.className='ms-toast';el.dataset.kind=kind;const duration=kind==='error'?6500:4200;el.innerHTML='<div class="ms-toast-icon" aria-hidden="true">'+icons[kind]+'</div><div><div class="ms-toast-title">'+esc(title||titles[kind]||titles.info)+'</div><div class="ms-toast-message">'+esc(message)+'</div><div class="ms-toast-bar"><span style="animation-duration:'+duration+'ms"></span></div></div><button class="ms-toast-close" type="button" aria-label="Закрыть">×</button>';const close=()=>{if(!el.isConnected)return;el.style.opacity='0';el.style.transform='translateY(-5px)';setTimeout(()=>el.remove(),180)};el.querySelector('button').onclick=close;stack.appendChild(el);setTimeout(close,duration);return el}function dialog({title='Подтвердите действие',message='',icon='?',ok='Продолжить',cancel='Отмена',showCancel=true,danger=false,input=false,value='',placeholder='',kind='confirm'}){if(resolveDialog)resolveDialog(kind==='prompt'?null:false);return new Promise(resolve=>{resolveDialog=resolve;previousFocus=document.activeElement;$('ms-dialog-title').textContent=title;$('ms-dialog-message').textContent=message;$('ms-dialog-icon').textContent=icon;$('ms-dialog-ok').textContent=ok;$('ms-dialog-ok').classList.toggle('danger',danger);$('ms-dialog-cancel').textContent=cancel;$('ms-dialog-cancel').hidden=!showCancel;const inp=$('ms-dialog-input');inp.hidden=!input;inp.value=value||'';inp.placeholder=placeholder;layer.classList.add('open');layer.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';const finish=result=>{if(!resolveDialog)return;const r=resolveDialog;resolveDialog=null;layer.classList.remove('open');layer.setAttribute('aria-hidden','true');document.body.style.overflow='';$('ms-dialog-ok').onclick=null;$('ms-dialog-cancel').onclick=null;$('ms-dialog-close').onclick=null;layer.removeEventListener('keydown',onKey);r(result);previousFocus?.focus?.()};const onKey=e=>{if(e.key==='Escape'){e.preventDefault();finish(kind==='prompt'?null:false)}if(e.key==='Enter'&&e.target!==$('ms-dialog-cancel')){e.preventDefault();finish(kind==='prompt'?inp.value:true)}};$('ms-dialog-ok').onclick=()=>finish(kind==='prompt'?inp.value:true);$('ms-dialog-cancel').onclick=$('ms-dialog-close').onclick=()=>finish(kind==='prompt'?null:false);layer.addEventListener('keydown',onKey);layer.onclick=e=>{if(e.target===layer)finish(kind==='prompt'?null:false)};setTimeout(()=>input?inp.focus():$('ms-dialog-ok').focus(),30)})}const api={toast,success:m=>toast(m,'success'),error:m=>toast(m,'error'),warning:m=>toast(m,'warning'),info:m=>toast(m,'info'),confirm:opts=>dialog(typeof opts==='string'?{message:opts}:opts),prompt:opts=>dialog({...opts,input:true,kind:'prompt'})};window.MSNotify=api;window.alert=message=>{toast(message,'info','Сообщение')};})();</script>
+</body></html>
