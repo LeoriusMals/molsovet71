@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#edf7f1"><meta name="robots" content="noindex,nofollow">
+<title>404 — Страница не найдена | Молодёжный совет</title>
+<style>
+:root{color-scheme:light;--green:#078d56;--green-dark:#073d30;--mint:#edf7f1;--mint-soft:#f5faf7;--line:#d9e9e0;--muted:#668176;--ink:#123d31;--white:#fff}
+*{box-sizing:border-box}
+html{min-height:100%;background:var(--mint)}
+body{min-height:100vh;margin:0;padding:34px 22px;display:grid;place-items:center;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:radial-gradient(ellipse at 12% 8%,rgba(255,255,255,.95),transparent 36%),radial-gradient(ellipse at 92% 92%,rgba(211,237,222,.55),transparent 34%),linear-gradient(135deg,#edf7f1 0%,#f7fbf8 55%,#edf7f1 100%)}
+.shell{width:min(100%,1000px);margin:auto}
+.brand{display:flex;align-items:center;gap:13px;margin:0 0 22px 4px;text-align:left}
+.brand img{display:block;width:48px;height:48px;object-fit:contain;border-radius:11px;background:#fff;border:1px solid var(--line);padding:4px}
+.brand-name{font-size:18px;line-height:1.2;font-weight:800;letter-spacing:-.35px;color:var(--green-dark)}
+.brand-sub{margin-top:4px;font-size:13px;line-height:1.3;color:var(--muted);font-weight:550}
+.card{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(0,1.18fr);min-height:510px;overflow:hidden;border:1px solid rgba(215,233,223,.95);border-radius:28px;background:rgba(255,255,255,.94);box-shadow:0 22px 65px rgba(17,82,57,.09)}
+.visual{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:510px;padding:42px 30px;color:#fff;text-align:center;background:linear-gradient(145deg,#075f40 0%,#078d56 56%,#21a66e 100%);overflow:hidden}
+.visual:before,.visual:after{content:"";position:absolute;z-index:-1;border:1px solid rgba(255,255,255,.14);border-radius:50%;aspect-ratio:1}
+.visual:before{width:420px;left:-180px;top:-165px}.visual:after{width:360px;right:-170px;bottom:-140px}
+.visual-mark{width:132px;height:132px;display:grid;place-items:center;margin:0 auto 20px;border:1px solid rgba(255,255,255,.32);border-radius:30px;background:rgba(255,255,255,.88);box-shadow:0 14px 35px rgba(0,0,0,.1)}
+.visual-mark img{width:96px;height:96px;display:block;object-fit:contain}
+.visual-code{margin:0;font-size:clamp(76px,10vw,112px);line-height:.9;font-weight:850;letter-spacing:-7px;color:#fff}
+.visual-caption{margin:18px 0 0;font-size:13px;line-height:1.5;font-weight:650;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.content{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(34px,5vw,62px)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 17px;padding:8px 12px;border:1px solid #d8eee1;border-radius:999px;background:#eff8f2;color:#087849;font-size:12px;font-weight:750;letter-spacing:.45px;text-transform:uppercase}
+.eyebrow-dot{width:7px;height:7px;border-radius:50%;background:#0b9b60;box-shadow:0 0 0 4px rgba(11,155,96,.12)}
+h1{margin:0;color:var(--green-dark);font-size:clamp(29px,4vw,42px);line-height:1.12;letter-spacing:-1.35px;font-weight:820}
+.description{max-width:500px;margin:17px 0 0;color:#668176;font-size:16px;line-height:1.75}
+.info{width:100%;display:flex;align-items:flex-start;gap:13px;margin:27px 0 0;padding:16px 17px;border:1px solid #e0eee6;border-radius:16px;background:#f7fbf8}
+.info-icon{width:38px;height:38px;flex:none;display:grid;place-items:center;border-radius:12px;background:#e4f3e9;color:#087849}
+.info-icon svg{width:20px;height:20px}
+.info-copy strong{display:block;margin:1px 0 4px;color:#174b39;font-size:14px;font-weight:750}
+.info-copy span{display:block;color:#71877d;font-size:13px;line-height:1.55}
+.actions{width:100%;display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 18px;border:1px solid transparent;border-radius:12px;text-decoration:none;cursor:pointer;font:700 14px/1.2 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid #8bd4ad;outline-offset:3px}
+.primary{color:#fff;background:linear-gradient(105deg,#078d56,#08784b);box-shadow:0 8px 18px rgba(7,141,86,.17)}
+.primary:hover{box-shadow:0 11px 22px rgba(7,141,86,.23)}
+.secondary{color:#087849;background:#fff;border-color:#d4e8dc}
+.secondary:hover{background:#f4faf6}
+.footer{margin:20px 0 0 4px;color:#8aa398;font-size:12px;line-height:1.5}
+@media(max-width:720px){body{padding:20px 14px}.brand{margin:0 0 16px 2px}.card{grid-template-columns:1fr;min-height:0;border-radius:23px}.visual{min-height:230px;padding:28px 20px}.visual-mark{width:92px;height:92px;margin-bottom:17px;border-radius:22px}.visual-mark img{width:72px;height:72px}.visual-code{font-size:76px;letter-spacing:-5px}.visual-caption{margin-top:11px;font-size:11px}.content{padding:30px 24px 28px}.description{font-size:15px}.info{margin-top:21px}.actions{margin-top:22px}.btn{flex:1 1 100%}.footer{text-align:center;margin:16px 0 0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script src="municipality-data.js"></script></head>
+<body>
+<main class="shell">
+<header class="brand"><img src="assets/molodezh-logo.jpeg" alt="Логотип Молодёжного совета"><div><div class="brand-name">Молодёжный совет</div><div class="brand-sub">Правительства Тульской области</div></div></header>
+<section class="card" aria-labelledby="pageTitle">
+<div class="visual" aria-hidden="true"><div class="visual-mark"><img src="assets/404-emblem.png" alt=""></div><p class="visual-code">404</p><p class="visual-caption">Страница не найдена</p></div>
+<div class="content"><p class="eyebrow"><span class="eyebrow-dot"></span> Ошибка адреса</p><h1 id="pageTitle">Кажется, мы не нашли эту страницу</h1><p class="description">Возможно, ссылка устарела, страница была перемещена или в адресе допущена ошибка. Вы можете вернуться на главную или перейти на предыдущую страницу.</p>
+<div class="info"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4m0 4h.01"/><circle cx="12" cy="12" r="9"/></svg></div><div class="info-copy"><strong>Ничего страшного</strong><span>Проверьте адрес страницы или воспользуйтесь кнопками ниже.</span></div></div>
+<div class="actions"><a class="btn primary" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9M9 21v-7h6v7"/></svg> На главную</a><button class="btn secondary" type="button" id="backButton"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7M5 12h14"/></svg> Вернуться назад</button></div>
+</div></section>
+<footer class="footer">Молодёжный совет Правительства Тульской области</footer>
+</main>
+<script>document.getElementById('backButton').addEventListener('click',function(){if(history.length>1)history.back();else location.href='index.html';});</script>
+</body></html>

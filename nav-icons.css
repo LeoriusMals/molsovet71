@@ -1,0 +1,8 @@
+/* Иконки боковой навигации. Не переопределяет размеры, расположение и цвета исходных панелей. */
+.side .nav .nav-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 18px;width:18px;height:18px;margin-right:8px;color:inherit;vertical-align:middle;opacity:.9}
+.side .nav .nav-icon svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.side .nav a.active .nav-icon,.side .nav button.active .nav-icon{opacity:1}
+
+/* Счётчики в пунктах бокового меню: отделяем от текста и выравниваем по правому краю. */
+.side .nav button{display:flex;align-items:center}
+.side .nav button > span[id$="Badge"]{margin-left:auto;flex:0 0 auto;white-space:nowrap}

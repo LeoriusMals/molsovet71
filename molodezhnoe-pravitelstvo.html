@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102b4d">
+<meta name="description" content="Официальный информационный портал Молодёжного Правительства Тульской области.">
+<title>Молодёжное Правительство Тульской области</title>
+<style>
+:root{
+ --navy:#102b4d;--navy-2:#183b61;--green:#087d50;--green-soft:#eaf5ef;
+ --ink:#18352c;--muted:#71847b;--line:#dce7e1;--paper:#fff;--bg:#f4f7f5;
+ --gold:#c4a66a;--shadow:0 14px 42px rgba(16,43,77,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+button,a{font:inherit}
+button{cursor:pointer}
+.site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.header-inner{max-width:1240px;margin:auto;min-height:82px;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:14px;min-width:245px;color:var(--navy);text-decoration:none}
+.brand img{width:54px;height:54px;object-fit:contain}
+.brand-text{font-size:14px;line-height:1.3;font-weight:750;max-width:205px}
+.brand-text small{display:block;color:var(--muted);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+.main-nav{display:flex;align-items:center;justify-content:flex-end;gap:5px;flex-wrap:wrap}
+.nav-btn{border:0;background:transparent;color:#53695f;border-radius:10px;padding:11px 12px;font-size:13px;font-weight:700;transition:.18s}
+.nav-btn:hover{background:#f1f6f3;color:var(--green)}
+.nav-btn.active{background:var(--green-soft);color:var(--green)}
+.mobile-menu{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;width:42px;height:42px;color:var(--navy);font-size:20px}
+main{max-width:1240px;margin:0 auto;padding:30px 28px 64px;min-height:calc(100vh - 160px)}
+.view{display:none;animation:fade .22s ease}
+.view.active{display:block}
+@keyframes fade{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#102b4d 0%,#173b62 68%,#1b604c 100%);border-radius:22px;padding:54px 58px;color:#fff;min-height:310px;display:flex;align-items:center;box-shadow:var(--shadow)}
+.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-100px;top:-170px;box-shadow:0 0 0 35px rgba(255,255,255,.025),0 0 0 75px rgba(255,255,255,.02)}
+.hero-copy{position:relative;z-index:1;max-width:700px}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#a9d9c2;margin-bottom:15px}
+.hero h1{font-size:clamp(30px,4.5vw,52px);line-height:1.08;letter-spacing:-.04em;margin:0 0 17px;max-width:720px}
+.hero p{font-size:16px;line-height:1.65;color:rgba(255,255,255,.78);margin:0;max-width:630px}
+.hero-logo-card{position:absolute;right:64px;top:50%;transform:translateY(-50%);z-index:1;width:218px;height:218px;padding:24px;display:grid;place-items:center;background:#fff;border:1px solid rgba(255,255,255,.75);border-radius:30px;box-shadow:0 18px 48px rgba(4,22,38,.18)}
+.hero-logo-card img{display:block;width:100%;height:100%;object-fit:contain;opacity:1;filter:none}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin:36px 0 18px}
+.section-head h2{font-size:24px;letter-spacing:-.025em;color:var(--navy);margin:0}
+.section-head p{color:var(--muted);font-size:13px;margin:7px 0 0;line-height:1.5}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px 20px;min-height:102px}
+.stat span{display:block;color:var(--muted);font-size:12px;font-weight:650}
+.stat strong{display:block;color:var(--navy);font-size:27px;line-height:1.2;margin-top:9px}
+.module-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.module-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;min-height:174px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;transition:.2s;color:inherit}
+.module-card:hover{transform:translateY(-3px);border-color:#b9d8c7;box-shadow:var(--shadow)}
+.module-icon{width:42px;height:42px;border-radius:12px;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:19px;margin-bottom:16px}
+.module-card b{font-size:14px;color:var(--navy);margin-bottom:7px}
+.module-card span:last-child{font-size:12px;line-height:1.5;color:var(--muted)}
+.content-panel{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 24px rgba(16,43,77,.035);overflow:hidden}
+.panel-top{padding:25px 28px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,#fff,#fbfdfb)}
+.panel-top h2{font-size:25px;color:var(--navy);margin:0}
+.panel-top p{font-size:14px;color:var(--muted);line-height:1.6;margin:8px 0 0;max-width:760px}
+.panel-body{padding:26px 28px}
+.structure-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.structure-card{border:1px solid var(--line);border-radius:14px;padding:19px;background:#fff}
+.structure-card small{font-size:11px;color:var(--green);font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.structure-card h3{font-size:17px;color:var(--navy);margin:8px 0}
+.structure-card p{font-size:13px;line-height:1.55;color:var(--muted);margin:0}
+.empty-state{border:1px dashed #cbdcd2;background:#fbfdfb;border-radius:15px;padding:36px 22px;text-align:center}
+.empty-icon{width:48px;height:48px;margin:0 auto 13px;border-radius:14px;background:var(--green-soft);display:grid;place-items:center;color:var(--green);font-size:21px}
+.empty-state h3{margin:0 0 8px;color:var(--navy);font-size:17px}
+.empty-state p{max-width:560px;margin:0 auto;color:var(--muted);font-size:13px;line-height:1.65}
+.list-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.search{width:min(360px,100%);height:43px;border:1px solid var(--line);border-radius:10px;padding:0 13px;background:#fff;color:var(--ink);outline:none}
+.search:focus{border-color:#8dbfa5;box-shadow:0 0 0 3px rgba(8,125,80,.08)}
+.filter-note{font-size:12px;color:var(--muted)}
+.document-note{display:flex;gap:12px;align-items:flex-start;border:1px solid #e6ddc9;background:#fbf8f1;border-radius:13px;padding:16px 18px;margin-top:18px}
+.document-note b{display:block;font-size:13px;color:#705d37;margin-bottom:4px}
+.document-note span{font-size:12px;color:#887957;line-height:1.5}
+.site-footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:12px}
+.footer-inner{max-width:1240px;margin:auto;padding:21px 28px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:1050px){.module-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-logo-card{right:24px;width:164px;height:164px;padding:18px;border-radius:24px}}
+@media(max-width:760px){
+ .header-inner{min-height:72px;padding:10px 16px;flex-wrap:wrap}
+ .brand{min-width:0;flex:1}.brand img{width:46px;height:46px}.brand-text{font-size:12px}
+ .mobile-menu{display:block}
+ .main-nav{display:none;width:100%;justify-content:flex-start;padding:4px 0 8px}
+ .main-nav.open{display:flex}
+ .nav-btn{font-size:12px;padding:10px}
+ main{padding:18px 16px 42px}
+ .hero{padding:35px 25px 145px;min-height:300px;border-radius:17px}
+ .hero p{font-size:14px}
+ .hero-logo-card{right:18px;top:auto;bottom:18px;transform:none;width:104px;height:104px;padding:12px;border-radius:18px}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .stat{padding:15px;min-height:88px}.stat strong{font-size:23px}
+ .module-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .module-card{padding:14px;min-height:160px}
+ .section-head{margin:28px 0 14px}
+ .panel-top,.panel-body{padding:20px 17px}
+ .structure-grid{grid-template-columns:1fr}
+ .list-tools{align-items:stretch;flex-direction:column}
+}
+@media(max-width:390px){.module-grid{grid-template-columns:1fr}.module-card{min-height:125px}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+ <div class="header-inner">
+  <a class="brand" href="#" aria-label="На главную" data-view-link="home">
+   <img src="assets/molodezhnoe-pravitelstvo-logo.png" alt="">
+   <span class="brand-text">Молодёжное Правительство<small>Тульской области</small></span>
+  </a>
+  <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+  <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+   <button class="nav-btn active" type="button" data-view-link="home">Главная</button>
+   <button class="nav-btn" type="button" data-view-link="structure">Структура</button>
+   <button class="nav-btn" type="button" data-view-link="ministries">Министерства</button>
+   <button class="nav-btn" type="button" data-view-link="projects">Проекты</button>
+   <button class="nav-btn" type="button" data-view-link="tasks">Поручения</button>
+   <button class="nav-btn" type="button" data-view-link="meetings">Заседания</button>
+  </nav>
+ </div>
+</header>
+<main>
+ <section class="view active" id="view-home">
+  <div class="hero">
+   <div class="hero-copy">
+    <div class="eyebrow">Тульская область · Молодёжное Правительство</div>
+    <h1>Идеи. Решения. Результаты.</h1>
+    <p>Площадка для работы молодёжной команды, реализации инициатив и участия в развитии Тульской области.</p>
+   </div>
+   <div class="hero-logo-card" aria-hidden="true">
+    <img src="assets/molodezhnoe-pravitelstvo-logo.png" alt="">
+   </div>
+  </div>
+  <div class="stats">
+   <div class="stat"><span>Министерства</span><strong>—</strong></div>
+   <div class="stat"><span>Участники</span><strong>—</strong></div>
+   <div class="stat"><span>Реализованные проекты</span><strong>—</strong></div>
+   <div class="stat"><span>Исполненные поручения</span><strong>—</strong></div>
+  </div>
+  <div class="section-head"><div><h2>Основные направления работы</h2><p>Выберите раздел, чтобы ознакомиться с деятельностью Молодёжного Правительства.</p></div></div>
+  <div class="module-grid">
+   <button class="module-card" type="button" data-view-link="structure"><span class="module-icon">♙</span><b>Структура и состав</b><span>Руководство, министерства и участники команды.</span></button>
+   <button class="module-card" type="button" data-view-link="ministries"><span class="module-icon">▤</span><b>Министерства</b><span>Направления работы, руководители и состав ведомств.</span></button>
+   <button class="module-card" type="button" data-view-link="projects"><span class="module-icon">◇</span><b>Проекты</b><span>Инициативы, этапы реализации и достигнутые результаты.</span></button>
+   <button class="module-card" type="button" data-view-link="tasks"><span class="module-icon">✓</span><b>Поручения</b><span>Контроль исполнения задач и решений руководства.</span></button>
+   <button class="module-card" type="button" data-view-link="meetings"><span class="module-icon">▦</span><b>Заседания</b><span>Повестки, решения и протоколы заседаний.</span></button>
+  </div>
+  <div class="document-note"><div>ⓘ</div><div><b>Информация обновляется</b><span>Разделы портала подготовлены к наполнению. Официальные сведения о составе, министерствах, проектах и заседаниях будут опубликованы после внесения и проверки данных.</span></div></div>
+ </section>
+
+ <section class="view" id="view-structure">
+  <div class="content-panel">
+   <div class="panel-top"><h2>Структура и состав</h2><p>Организационная структура Молодёжного Правительства Тульской области и сведения о его участниках.</p></div>
+   <div class="panel-body">
+    <div class="structure-grid">
+     <article class="structure-card"><small>Руководство</small><h3>Председатель Молодёжного Правительства</h3><p>Сведения о руководителе и его полномочиях будут добавлены после утверждения состава.</p></article>
+     <article class="structure-card"><small>Руководство</small><h3>Заместители председателя</h3><p>Информация о заместителях и распределении направлений ответственности.</p></article>
+     <article class="structure-card"><small>Ведомства</small><h3>Министры</h3><p>Состав руководителей министерств Молодёжного Правительства.</p></article>
+     <article class="structure-card"><small>Команда</small><h3>Участники</h3><p>Участники Молодёжного Правительства и закреплённые направления работы.</p></article>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section class="view" id="view-ministries">
+  <div class="content-panel">
+   <div class="panel-top"><h2>Министерства</h2><p>Ведомства Молодёжного Правительства, их задачи, руководители, состав и реализуемые инициативы.</p></div>
+   <div class="panel-body">
+    <div class="list-tools"><input class="search" id="ministrySearch" type="search" placeholder="Поиск по министерствам" aria-label="Поиск по министерствам"><span class="filter-note">Официальный перечень будет опубликован после утверждения.</span></div>
+    <div class="empty-state" id="ministryEmpty"><div class="empty-icon">▤</div><h3>Список министерств пока не опубликован</h3><p>Здесь появятся карточки министерств с описанием направлений деятельности, руководителями, составом и проектами.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="view" id="view-projects">
+  <div class="content-panel">
+   <div class="panel-top"><h2>Проекты и инициативы</h2><p>Проекты Молодёжного Правительства: от идеи и планирования до реализации и оценки результатов.</p></div>
+   <div class="panel-body">
+    <div class="list-tools"><input class="search" id="projectSearch" type="search" placeholder="Поиск по проектам" aria-label="Поиск по проектам"><span class="filter-note">Публичная информация о ходе реализации.</span></div>
+    <div class="empty-state"><div class="empty-icon">◇</div><h3>Проекты ещё не добавлены</h3><p>В этом разделе будут размещаться описание проектов, ответственное министерство, руководитель, сроки, статус и результаты реализации.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="view" id="view-tasks">
+  <div class="content-panel">
+   <div class="panel-top"><h2>Поручения и контроль исполнения</h2><p>Публичная информация о поручениях, сроках исполнения и результатах работы.</p></div>
+   <div class="panel-body">
+    <div class="empty-state"><div class="empty-icon">✓</div><h3>Опубликованных поручений пока нет</h3><p>В дальнейшем здесь будут отображаться поручения, разрешённые к публикации, ответственные направления, сроки и статусы исполнения.</p></div>
+    <div class="document-note"><div>ⓘ</div><div><b>Внутренняя работа</b><span>Рабочие поручения и служебные комментарии не будут доступны публично. Для них предусматривается отдельный закрытый интерфейс.</span></div></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="view" id="view-meetings">
+  <div class="content-panel">
+   <div class="panel-top"><h2>Заседания</h2><p>Информация о заседаниях Молодёжного Правительства, повестках, принятых решениях и протоколах.</p></div>
+   <div class="panel-body">
+    <div class="empty-state"><div class="empty-icon">▦</div><h3>Заседания пока не опубликованы</h3><p>Здесь будут размещаться даты заседаний, повестки, сведения об итогах и документы, доступные для открытого просмотра.</p></div>
+   </div>
+  </div>
+ </section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><span>Молодёжное Правительство Тульской области</span><span>Официальный информационный портал</span></div></footer>
+<script>
+(function(){
+ 'use strict';
+ const nav=document.getElementById('mainNav');
+ const menu=document.getElementById('mobileMenu');
+ const links=[...document.querySelectorAll('[data-view-link]')];
+ const views=[...document.querySelectorAll('.view')];
+ function showView(name){
+  const target=document.getElementById('view-'+name);
+  if(!target)return;
+  views.forEach(v=>v.classList.toggle('active',v===target));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.viewLink===name));
+  nav.classList.remove('open');menu.setAttribute('aria-expanded','false');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(history.replaceState)history.replaceState(null,'','#'+name);
+ }
+ links.forEach(link=>link.addEventListener('click',e=>{e.preventDefault();showView(link.dataset.viewLink)}));
+ menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
+ const initial=(location.hash||'').slice(1);
+ if(initial&&document.getElementById('view-'+initial))showView(initial);
+})();
+
+/* Публикация материалов Молодёжного Правительства из административной панели */
+(function(){
+ 'use strict';
+ const KEY='tula_youth_government_cms_v1';
+ const fallback={
+  home:{title:'Идеи. Решения. Результаты.',description:'Площадка для работы молодёжной команды, реализации инициатив и участия в развитии Тульской области.',entries:[]},
+  structure:{title:'Структура и состав',description:'Организационная структура Молодёжного Правительства Тульской области и сведения о его участниках.',entries:[]},
+  ministries:{title:'Министерства',description:'Направления деятельности, руководители и состав министерств Молодёжного Правительства.',entries:[]},
+  projects:{title:'Проекты и инициативы',description:'Проекты Молодёжного Правительства: от идеи и планирования до реализации и оценки результатов.',entries:[]},
+  tasks:{title:'Поручения и контроль исполнения',description:'Публичная информация о поручениях, сроках исполнения и результатах работы.',entries:[]},
+  meetings:{title:'Заседания',description:'Информация о заседаниях Молодёжного Правительства, повестках, принятых решениях и протоколах.',entries:[]}
+ };
+ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function read(){let d={};try{d=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){}Object.keys(fallback).forEach(k=>{if(!d[k])d[k]=fallback[k];if(!Array.isArray(d[k].entries))d[k].entries=[]});return d}
+ function render(){
+  const d=read();
+  const hero=document.querySelector('#view-home .hero-copy');
+  if(hero){const h=hero.querySelector('h1'),p=hero.querySelector('p');if(h)h.textContent=d.home.title;if(p)p.textContent=d.home.description}
+  const home=document.getElementById('view-home');
+  if(home){let wrap=home.querySelector('.yg-home-materials');if(!wrap){wrap=document.createElement('div');wrap.className='yg-home-materials';const note=home.querySelector('.document-note');if(note)home.insertBefore(wrap,note);else home.appendChild(wrap)}wrap.innerHTML=d.home.entries.length?'<div class="section-head"><div><h2>Актуальная информация</h2></div></div><div class="structure-grid">'+d.home.entries.map(x=>'<article class="structure-card">'+(x.meta?'<small>'+esc(x.meta)+'</small>':'')+'<h3>'+esc(x.title)+'</h3><p>'+esc(x.text)+'</p></article>').join('')+'</div>':''}
+  ['structure','ministries','projects','tasks','meetings'].forEach(k=>{
+   document.querySelectorAll('#view-'+k).forEach(view=>{
+    const top=view.querySelector('.panel-top'),body=view.querySelector('.panel-body');if(!top||!body)return;
+    const h=top.querySelector('h2'),p=top.querySelector('p');if(h)h.textContent=d[k].title;if(p)p.textContent=d[k].description;
+    if(d[k].entries.length){body.innerHTML='<div class="structure-grid">'+d[k].entries.map(x=>'<article class="structure-card">'+(x.meta?'<small>'+esc(x.meta)+'</small>':'')+'<h3>'+esc(x.title)+'</h3><p>'+esc(x.text).replace(/\n/g,'<br>')+'</p></article>').join('')+'</div>'}
+   });
+  });
+ }
+ render();
+ window.addEventListener('storage',e=>{if(e.key===KEY)render()});
+})();
+</script>
+</body>
+</html>
